@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/bottomNavigation.dart';
 import 'package:secoola_app/view/courseCompleted_screen.dart';
 import 'package:secoola_app/view/courseDetails_screen.dart';
 import 'package:secoola_app/view/home_screen.dart';

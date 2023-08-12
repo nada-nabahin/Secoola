@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:secoola_app/view/widgets/appBar_widgets/appBar.dart';
+import 'package:secoola_app/view/widgets/appBar_widgets/appBarContainer.dart';
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 import 'package:secoola_app/view/widgets/tabBar.dart';
 
@@ -14,11 +14,42 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: const Padding(
+          padding: EdgeInsets.only(
+            left: 20,
+            top: 20,
+          ),
+          child: Row(
+            children: [
+              Text(
+                'My',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+              Text(
+                ' Course',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       backgroundColor: Color(0xffFAFAFA),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            appBar(),
+            appBar(
+              appBarTitle: '',
+            ),
             SizedBox(
               height: 20,
             ),

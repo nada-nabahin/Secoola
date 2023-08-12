@@ -144,18 +144,23 @@ class ListViewItem extends StatelessWidget {
                         width: 5,
                       ),
                       Container(
-                        width: 85,
-                        height: 20,
+                        height: 25,
                         decoration: BoxDecoration(
                           color: shadeColor,
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Text(
-                          textAlign: TextAlign.center,
-                          noteAboutPrice,
-                          style: TextStyle(
-                            color: noteColor,
-                            fontSize: 12,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 5),
+                          child: Center(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              noteAboutPrice,
+                              style: TextStyle(
+                                color: noteColor,
+                                fontSize: 12,
+                              ),
+                            ),
                           ),
                         ),
                       ),

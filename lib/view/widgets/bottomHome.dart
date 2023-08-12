@@ -13,6 +13,7 @@ class _BottomNavManagerState extends State<BottomNavManager> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: ScreenManager.screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,

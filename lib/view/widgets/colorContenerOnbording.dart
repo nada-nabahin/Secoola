@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 class ContenerColoeOnbordingCustom extends StatelessWidget {
   Color? color;
-   ContenerColoeOnbordingCustom({
-    super.key, @required this.color
-  });
+  ContenerColoeOnbordingCustom({super.key, @required this.color});
 
   @override
   Widget build(BuildContext context) {

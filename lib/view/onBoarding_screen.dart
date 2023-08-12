@@ -5,6 +5,8 @@ import 'package:secoola_app/view/Registeration%20screens/signin.dart';
 import 'package:secoola_app/view/Registeration%20screens/signup.dart';
 import 'package:secoola_app/view/home_screen.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
+import 'package:secoola_app/view/widgets/onBoardingButtons.dart';
+import 'package:secoola_app/view/widgets/onBoarding_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -46,270 +48,67 @@ class _OnBoardingState extends State<OnBoarding> {
                 Column(
                   children: [
                     const SizedBox(
-                      height: 143,
+                      height: 135,
                     ),
                     ContenerColoeOnbordingCustom(color: Color(0xffFCE2EA)),
                     const SizedBox(
                       height: 100,
                     ),
-                    Center(
-                      child: Container(
-                        width: 271,
-                        child: const Column(
-                          children: [
-                            Text(
-                              'Join and study together',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            Text(
-                              'Find your best experience while studying and seeking knowledge in here',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xffA9AEB2),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    OnBoardingText(
+                      firstText: 'Join and study together',
+                      secondText:
+                          'Find your best experience while studying and seeking knowledge in here',
                     ),
                     const SizedBox(
                       height: 80,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignUp());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'Let\'s get started',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignIn());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'I already have an account',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),
                 Column(
                   children: [
                     const SizedBox(
-                      height: 143,
+                      height: 135,
                     ),
                     ContenerColoeOnbordingCustom(color: Color(0xffFFEA7D)),
                     const SizedBox(
                       height: 100,
                     ),
-                    Center(
-                      child: Container(
-                        width: 271,
-                        child: const Column(
-                          children: [
-                            Text(
-                              'Find your mentors',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            Text(
-                              'Find your best experience while studying and seeking knowledge in here',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xffA9AEB2),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    OnBoardingText(
+                      firstText: 'Find your mentors',
+                      secondText:
+                          'Find your best experience while studying and seeking knowledge in here',
                     ),
                     const SizedBox(
                       height: 80,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignUp());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'Let\'s get started',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignIn());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'I already have an account',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),
                 Column(
                   children: [
                     const SizedBox(
-                      height: 143,
+                      height: 135,
                     ),
                     ContenerColoeOnbordingCustom(
                         color: const Color(0xffFD0B2FF)),
                     const SizedBox(
                       height: 100,
                     ),
-                    Center(
-                      child: Container(
-                        width: 271,
-                        child: const Column(
-                          children: [
-                            Text(
-                              'Explore new knowledge',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 24,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 25,
-                            ),
-                            Text(
-                              'Find your best experience while studying and seeking knowledge in here',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Color(0xffA9AEB2),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    OnBoardingText(
+                      firstText: 'Explore new knowledge',
+                      secondText:
+                          'Find your best experience while studying and seeking knowledge in here',
                     ),
                     const SizedBox(
-                      height: 80,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignUp());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'Let\'s get started',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Container(
-                      width: 335,
-                      height: 52,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          Get.to(SignUp());
-                        },
-                        style: OutlinedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          side: BorderSide(color: Color(0xff00A9B7)),
-                        ),
-                        child: const Text(
-                          'I already have an account',
-                          style: TextStyle(
-                            color: Color(0xff00A9B7),
-                            fontSize: 16,
-                          ),
-                        ),
-                      ),
+                      height: 60,
                     ),
                   ],
                 ),
               ],
             ),
+          ),
+          OnBoardingButtons(),
+          SizedBox(
+            height: 60,
           ),
         ],
       ),

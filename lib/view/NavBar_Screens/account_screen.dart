@@ -6,6 +6,7 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Profile"),
+        automaticallyImplyLeading: false,
       ),
       body: Container(
         width: double.infinity,

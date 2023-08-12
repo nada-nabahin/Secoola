@@ -4,13 +4,18 @@ import 'SearchTextButton.dart';
 import 'circle_button.dart';
 
 class appBar extends StatelessWidget {
-  const appBar({super.key});
+  String appBarTitle;
+
+  appBar({
+    super.key,
+    required this.appBarTitle,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
-      height: 222,
+      height: 186,
       width: double.infinity,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -33,36 +38,25 @@ class appBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Hi Dimas,\nLet's start learning!",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-              Container(
-                child: Row(
-                  children: [
-                    CircleButton(
-                      icon: Icons.shopping_cart,
-                      onPressed: () {},
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    CircleButton(
-                      icon: Icons.notifications,
-                      onPressed: () {},
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: Text(
+                  appBarTitle,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
             ],
           ),
           const SizedBox(
-            height: 50,
+            height: 29,
           ),
-          const SearchTextButton()
+          const SearchTextButton(),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
