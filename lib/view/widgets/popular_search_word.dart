@@ -9,7 +9,9 @@ class PopularSearchWord extends StatelessWidget {
     return Container(
       height: 38,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.white),
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+      ),
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Text(

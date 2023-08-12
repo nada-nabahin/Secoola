@@ -19,8 +19,7 @@ class AccountScreen extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 30,
-                    backgroundColor:
-                        Color(0xffFFEA7D), // Change to desired color
+                    backgroundColor: Color(0xffFFEA7D),
                   ),
                   SizedBox(width: 10),
                   Column(
@@ -40,9 +39,7 @@ class AccountScreen extends StatelessWidget {
                   Spacer(),
                   IconButton(
                     icon: Icon(Icons.edit),
-                    onPressed: () {
-                      // Handle edit action
-                    },
+                    onPressed: () {},
                   ),
                 ],
               ),
@@ -85,9 +82,7 @@ class AccountScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 20),
                 child: TextButton(
-                  onPressed: () {
-                    // Handle sign out
-                  },
+                  onPressed: () {},
                   style: TextButton.styleFrom(
                     primary: Colors.red,
                     padding: EdgeInsets.symmetric(horizontal: 20),
@@ -96,7 +91,7 @@ class AccountScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20), // Add some spacing at the end
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -123,9 +118,7 @@ class SettingsItem extends StatelessWidget {
               size: 16,
             )
           : null,
-      onTap: () {
-        // Handle setting item click
-      },
+      onTap: () {},
     );
   }
 }

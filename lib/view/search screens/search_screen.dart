@@ -1,6 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/courseDetails_screen.dart';
+import 'package:secoola_app/view/search%20screens/search_result.dart';
 import 'package:secoola_app/view/widgets/listTileTitle.dart';
 import 'package:secoola_app/view/widgets/popular_search_word.dart';
 import 'package:secoola_app/view/widgets/searchTextField.dart';
@@ -18,11 +22,14 @@ class SearchScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: 40,
+              height: 10,
             ),
-            const SearchTextField(),
+            SearchTextField(
+              searchText: 'Search for anything',
+              searchIcon: Icons.mic,
+            ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             const Text(
               'Popular search',
@@ -60,8 +67,13 @@ class SearchScreen extends StatelessWidget {
                 PopularSearchWord(
                   searchWord: 'WebFlow',
                 ),
-                PopularSearchWord(
-                  searchWord: 'UX Design',
+                GestureDetector(
+                  onTap: () {
+                    Get.to(SearchResultScreen());
+                  },
+                  child: PopularSearchWord(
+                    searchWord: 'UX Design',
+                  ),
                 ),
                 PopularSearchWord(
                   searchWord: 'Flutter',

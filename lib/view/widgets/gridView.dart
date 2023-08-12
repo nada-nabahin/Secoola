@@ -71,7 +71,6 @@ class GridWidget extends StatelessWidget {
       itemCount: 6,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        // crossAxisSpacing: 5,
         mainAxisSpacing: 10,
       ),
       itemBuilder: (context, index) {
