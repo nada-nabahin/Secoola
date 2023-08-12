@@ -19,11 +19,11 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffFAFAFA),
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Color(0xffFFEA7D),
           elevation: 0,
-          //backgroundColor: const Color(0xffFFEA7D),
           leading: GestureDetector(
             onTap: () {
               Get.back();
@@ -51,8 +51,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
             children: [
               Container(
                 height: MediaQuery.of(context).size.height * 0.3,
-                color: Colors.blue,
-                //color: const Color(0xffFFEA7D),
+                color: Color(0xffFFEA7D),
                 child: Center(
                   child: CircleButton(
                     circleButtonColor: Color.fromRGBO(112, 112, 112, 0.2),

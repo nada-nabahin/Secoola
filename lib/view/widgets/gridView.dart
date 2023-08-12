@@ -65,6 +65,8 @@ class GridWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      shrinkWrap: true,
+      physics: ClampingScrollPhysics(),
       scrollDirection: Axis.vertical,
       itemCount: 6,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

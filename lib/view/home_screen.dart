@@ -25,325 +25,336 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Color(0xff00A9B7),
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: const Text(
-          'Hi, Dimas',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 24,
-          ),
-        ),
-        actions: [
-          GestureDetector(
-            onTap: () {
-              _shoppingBottomSheet(context);
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(
-                right: 5,
-                top: 5,
-              ),
-              child: CircleButton(
-                circleButtonColor: Color.fromRGBO(112, 112, 112, 0.2),
-                icon: Icons.shopping_cart,
-              ),
+    return SafeArea(
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          toolbarHeight: 190, // Set this height
+          backgroundColor: Color(0xffFAFAFA),
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          flexibleSpace: Container(
+            height: 180,
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
             ),
-          ),
-          SizedBox(
-            width: 5,
-          ),
-          GestureDetector(
-            onTap: () {
-              _notificationBottomSheet(context);
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(
-                right: 5,
-                top: 5,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
-              child: CircleButton(
-                circleButtonColor: Color.fromRGBO(112, 112, 112, 0.2),
-                icon: Icons.notifications,
-              ),
+              color: Color(0xff00A9B7),
             ),
-          ),
-        ],
-      ),
-      backgroundColor: Color(0xffFAFAFA),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Container(
-              height: 190,
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: Color(0xff00A9B7),
-              ),
-              child: const Column(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Spacer(),
+                  Row(
+                    children: [
+                      Text(
+                        'Hi,Dimas',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
+                      ),
+                      Spacer(),
+                      GestureDetector(
+                        onTap: () {
+                          _shoppingBottomSheet(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            right: 5,
+                            top: 5,
+                          ),
+                          child: CircleButton(
+                            circleButtonColor:
+                                Color.fromRGBO(112, 112, 112, 0.2),
+                            icon: Icons.shopping_cart,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          _notificationBottomSheet(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            right: 5,
+                            top: 5,
+                          ),
+                          child: CircleButton(
+                            circleButtonColor:
+                                Color.fromRGBO(112, 112, 112, 0.2),
+                            icon: Icons.notifications,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   Text(
-                    " Let\'s start learning!",
+                    "Let\'s start learning!",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: 20,
                     ),
                   ),
-                  SizedBox(
-                    height: 15,
-                  ),
+                  Spacer(),
                   SearchTextButton(),
                 ],
               ),
             ),
-            Title_seeAll(
-              title: 'Popular course',
-              textButton_word: 'See All',
-            ),
-
-            Container(
-              height: 230,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(CourseDetailsScreen());
-                    },
-                    child: ListViewItem(
+          ),
+        ),
+        backgroundColor: Color(0xffFAFAFA),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 180,
+              ),
+              Title_seeAll(
+                title: 'Popular course',
+                textButton_word: 'See All',
+              ),
+              Container(
+                height: 230,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(CourseDetailsScreen());
+                      },
+                      child: ListViewItem(
+                        containerHeight: 140,
+                        containerWidth: 220,
+                        containerColor: Color(0xffFFEA7D),
+                        title: 'Design Thingking Fundamental',
+                        personName: 'Robert Fix',
+                        price: '\$150',
+                        noteAboutPrice: 'Best Seller',
+                        shadeColor: const Color(0xffFCE2EA),
+                        noteColor: const Color(0xffFF6666),
+                      ),
+                    ),
+                    ListViewItem(
                       containerHeight: 140,
                       containerWidth: 220,
-                      containerColor: Color(0xffFFEA7D),
-                      title: 'Design Thingking Fundamental',
-                      personName: 'Robert Fix',
-                      price: '\$150',
-                      noteAboutPrice: 'Best Seller',
-                      shadeColor: const Color(0xffFCE2EA),
-                      noteColor: const Color(0xffFF6666),
+                      containerColor: const Color(0xffA3CCDE),
+                      title: 'Flutter Class - Advance Program',
+                      personName: 'Wade Warren',
+                      price: '\$24',
+                      noteAboutPrice: 'Recommended',
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
-                  ),
-                  ListViewItem(
-                    containerHeight: 140,
-                    containerWidth: 220,
-                    containerColor: const Color(0xffA3CCDE),
-                    title: 'Flutter Class - Advance Program',
-                    personName: 'Wade Warren',
-                    price: '\$24',
-                    noteAboutPrice: 'Recommended',
-                    shadeColor: const Color(0xffDCF3F5),
-                    noteColor: const Color(0xff00A9B7),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Title_seeAll(
-              title: 'Categories',
-              textButton_word: 'See All',
-            ),
-
-            //i'll replace with list view
-            /////////////////////////////////////////////
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.art_track, topicName: 'Art'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.laptop, topicName: 'Coding'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.health_and_safety,
-                          topicName: 'Health'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.health_and_safety,
-                          topicName: 'Health'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.art_track, topicName: 'Art'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.laptop, topicName: 'Coding'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                    ],
-                  ),
-                ],
+              const SizedBox(
+                height: 10,
               ),
-            ),
+              Title_seeAll(
+                title: 'Categories',
+                textButton_word: 'See All',
+              ),
 
-            Title_seeAll(
-              title: 'Your topic',
-              textButton_word: 'See All',
-            ),
-            /////////////////////////////////////////////
-
-            Container(
-              height: 190,
-              child: ListView(
+              //i'll replace with list view
+              /////////////////////////////////////////////
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                children: [
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xff86F2CB),
-                    title: 'Design Thingking F...',
-                    personName: 'Dianne Russell',
-                    price: '\$75',
-                    noteAboutPrice: 'Best deal',
-                    shadeColor: Color(0xffDCF3F5),
-                    noteColor: Color(0xff00A9B7),
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffFCE2EA),
-                    title: 'Figma Prototyping 1...',
-                    personName: 'Jacob Jones',
-                    price: '\$32',
-                    noteAboutPrice: '',
-                    shadeColor: Colors.white,
-                    noteColor: Colors.white,
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffFFB099),
-                    title: 'UI UX Design Essentials',
-                    personName: 'Esther Howard',
-                    price: '\$83',
-                    noteAboutPrice: 'deal',
-                    shadeColor: Color(0xffDCF3F5),
-                    noteColor: Color(0xff00A9B7),
-                  ),
-                ],
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.art_track, topicName: 'Art'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.laptop, topicName: 'Coding'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.design_services,
+                            topicName: 'Design'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.health_and_safety,
+                            topicName: 'Health'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.design_services,
+                            topicName: 'Design'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.health_and_safety,
+                            topicName: 'Health'),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.art_track, topicName: 'Art'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.laptop, topicName: 'Coding'),
+                        CategoryTopicConatiner(
+                            topicIcon: Icons.design_services,
+                            topicName: 'Design'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Title_seeAll(
-              title: 'Your topic',
-              textButton_word: 'See All',
-            ),
-            Container(
-              height: 190,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffFFEA7D),
-                    title: 'Flutter Class - Adv...',
-                    personName: 'Cameron Williamson',
-                    price: '\$97',
-                    noteAboutPrice: '',
-                    shadeColor: Colors.white,
-                    noteColor: Colors.white,
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xff86F2CB),
-                    title: 'Python Class - Adv...',
-                    personName: 'Brooklyn Simmons',
-                    price: '\$56',
-                    noteAboutPrice: 'Most sold',
-                    shadeColor: Color(0xffDCF3F5),
-                    noteColor: Color(0xff00A9B7),
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffFFEA7D),
-                    title: 'Swift Class - Adv...',
-                    personName: 'Cameron Williamson',
-                    price: '\$41',
-                    noteAboutPrice: 'Label',
-                    shadeColor: Color(0xffDCF3F5),
-                    noteColor: Color(0xff00A9B7),
-                  ),
-                ],
-              ),
-            ),
 
-            Title_seeAll(
-              title: 'Your topic',
-              textButton_word: 'See All',
-            ),
-            Container(
-              height: 190,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffFFB099),
-                    title: 'Digital Marketing S...',
-                    personName: 'Esther Howard',
-                    price: '\$49',
-                    noteAboutPrice: 'Hot deals',
-                    shadeColor: Color(0xffFCE2EA),
-                    noteColor: Color(0xffFF6666),
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffD0B2FF),
-                    title: 'Personal Branding F...',
-                    personName: 'Savannah Nguyen',
-                    price: '\$66',
-                    noteAboutPrice: '',
-                    shadeColor: Colors.white,
-                    noteColor: Colors.white,
-                  ),
-                  ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
-                    containerColor: Color(0xffA3CCDE),
-                    title: 'Neuromarketing & Ma... ',
-                    personName: 'Arlene McCoy',
-                    price: '\$41',
-                    noteAboutPrice: 'Label',
-                    shadeColor: Color(0xffDCF3F5),
-                    noteColor: Color(0xff00A9B7),
-                  ),
-                ],
+              Title_seeAll(
+                title: 'Your topic',
+                textButton_word: 'See All',
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-          ],
+              /////////////////////////////////////////////
+
+              Container(
+                height: 190,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xff86F2CB),
+                      title: 'Design Thingking F...',
+                      personName: 'Dianne Russell',
+                      price: '\$75',
+                      noteAboutPrice: 'Best deal',
+                      shadeColor: Color(0xffDCF3F5),
+                      noteColor: Color(0xff00A9B7),
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffFCE2EA),
+                      title: 'Figma Prototyping 1...',
+                      personName: 'Jacob Jones',
+                      price: '\$32',
+                      noteAboutPrice: '',
+                      shadeColor: Colors.white,
+                      noteColor: Colors.white,
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffFFB099),
+                      title: 'UI UX Design Essentials',
+                      personName: 'Esther Howard',
+                      price: '\$83',
+                      noteAboutPrice: 'deal',
+                      shadeColor: Color(0xffDCF3F5),
+                      noteColor: Color(0xff00A9B7),
+                    ),
+                  ],
+                ),
+              ),
+              Title_seeAll(
+                title: 'Your topic',
+                textButton_word: 'See All',
+              ),
+              Container(
+                height: 190,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffFFEA7D),
+                      title: 'Flutter Class - Adv...',
+                      personName: 'Cameron Williamson',
+                      price: '\$97',
+                      noteAboutPrice: '',
+                      shadeColor: Colors.white,
+                      noteColor: Colors.white,
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xff86F2CB),
+                      title: 'Python Class - Adv...',
+                      personName: 'Brooklyn Simmons',
+                      price: '\$56',
+                      noteAboutPrice: 'Most sold',
+                      shadeColor: Color(0xffDCF3F5),
+                      noteColor: Color(0xff00A9B7),
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffFFEA7D),
+                      title: 'Swift Class - Adv...',
+                      personName: 'Cameron Williamson',
+                      price: '\$41',
+                      noteAboutPrice: 'Label',
+                      shadeColor: Color(0xffDCF3F5),
+                      noteColor: Color(0xff00A9B7),
+                    ),
+                  ],
+                ),
+              ),
+
+              Title_seeAll(
+                title: 'Your topic',
+                textButton_word: 'See All',
+              ),
+              Container(
+                height: 190,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffFFB099),
+                      title: 'Digital Marketing S...',
+                      personName: 'Esther Howard',
+                      price: '\$49',
+                      noteAboutPrice: 'Hot deals',
+                      shadeColor: Color(0xffFCE2EA),
+                      noteColor: Color(0xffFF6666),
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffD0B2FF),
+                      title: 'Personal Branding F...',
+                      personName: 'Savannah Nguyen',
+                      price: '\$66',
+                      noteAboutPrice: '',
+                      shadeColor: Colors.white,
+                      noteColor: Colors.white,
+                    ),
+                    ListViewItem(
+                      containerHeight: 100,
+                      containerWidth: 142,
+                      containerColor: Color(0xffA3CCDE),
+                      title: 'Neuromarketing & Ma... ',
+                      personName: 'Arlene McCoy',
+                      price: '\$41',
+                      noteAboutPrice: 'Label',
+                      shadeColor: Color(0xffDCF3F5),
+                      noteColor: Color(0xff00A9B7),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
         ),
       ),
     );
