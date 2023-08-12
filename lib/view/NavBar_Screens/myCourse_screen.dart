@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:secoola_app/view/widgets/appBar_widgets/appBarContainer.dart';
+import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 import 'package:secoola_app/view/widgets/tabBar.dart';
+
+import '../widgets/appBar_widgets/SearchTextButton.dart';
 
 class MyCourseScreen extends StatefulWidget {
   MyCourseScreen({super.key});
@@ -16,48 +18,30 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xff00A9B7),
         elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(
-            left: 20,
-            top: 20,
-          ),
-          child: Row(
-            children: [
-              Text(
-                'My',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-              Text(
-                ' Course',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ],
+        automaticallyImplyLeading: false,
+        title: Text(
+          'My Course',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
           ),
         ),
       ),
-      backgroundColor: Color(0xffFAFAFA),
+      backgroundColor: const Color(0xffFAFAFA),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            appBar(
-              appBarTitle: '',
-            ),
-            SizedBox(
+            const ContainerUnderAppbar(),
+            const SizedBox(
               height: 20,
             ),
-            TabBarVieWidget(
+            const TabBarVieWidget(
               tabLabel: 'Ongoing',
               tabLabel2: 'Complete',
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             CourseScreenTopic(

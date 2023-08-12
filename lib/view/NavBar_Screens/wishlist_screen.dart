@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:secoola_app/view/widgets/appBar_widgets/appBarContainer.dart';
-import 'package:secoola_app/view/widgets/gridView.dart';
+import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
+
+import '../widgets/appBar_widgets/SearchTextButton.dart';
+import '../widgets/gridView.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});
@@ -10,31 +12,20 @@ class WishlistScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: const Color(0xff00A9B7),
         elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(
-            left: 20,
-            top: 20,
-          ),
-          child: Row(
-            children: [
-              Text(
-                'Wishlist',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ],
+        automaticallyImplyLeading: false,
+        title: const Text(
+          'Wishlist',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
           ),
         ),
       ),
       body: Column(
         children: [
-          appBar(
-            appBarTitle: '',
-          ),
+          const ContainerUnderAppbar(),
           Expanded(
             child: GridWidget(),
           ),

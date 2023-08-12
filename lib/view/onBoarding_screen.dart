@@ -47,9 +47,7 @@ class _OnBoardingState extends State<OnBoarding> {
               children: [
                 Column(
                   children: [
-                    const SizedBox(
-                      height: 135,
-                    ),
+                    Spacer(),
                     ContenerColoeOnbordingCustom(color: Color(0xffFCE2EA)),
                     const SizedBox(
                       height: 100,

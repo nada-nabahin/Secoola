@@ -6,7 +6,6 @@ import 'package:secoola_app/view/widgets/CategoryTopicConatiner.dart';
 import 'package:secoola_app/view/widgets/Notification_Container.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/SearchTextButton.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
-import 'package:secoola_app/view/widgets/appBar_widgets/appBarContainer.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 import 'package:secoola_app/view/widgets/listView_item.dart';
@@ -29,30 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xff00A9B7),
         elevation: 0,
-        leading: const Padding(
-          padding: EdgeInsets.only(
-            left: 20,
-            top: 5,
-          ),
-          child: Row(
-            children: [
-              Text(
-                'Hi,',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-              Text(
-                ' Dimas',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ],
+        automaticallyImplyLeading: false,
+        title: const Text(
+          'Hi, Dimas',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
           ),
         ),
         actions: [
@@ -96,8 +79,35 @@ class _HomeScreenState extends State<HomeScreen> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            appBar(
-              appBarTitle: ' Let\'s start learning!',
+            Container(
+              height: 190,
+              width: double.infinity,
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                color: Color(0xff00A9B7),
+              ),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Spacer(),
+                  Text(
+                    " Let\'s start learning!",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  SearchTextButton(),
+                ],
+              ),
             ),
             Title_seeAll(
               title: 'Popular course',
