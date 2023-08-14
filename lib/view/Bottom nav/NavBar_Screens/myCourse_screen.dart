@@ -3,7 +3,7 @@ import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.d
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 import 'package:secoola_app/view/widgets/tabBar.dart';
 
-import '../widgets/appBar_widgets/SearchTextButton.dart';
+import '../../widgets/appBar_widgets/SearchTextButton.dart';
 
 class MyCourseScreen extends StatefulWidget {
   MyCourseScreen({super.key});
@@ -18,10 +18,10 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Color(0xff00A9B7),
+        backgroundColor: const Color(0xff00A9B7),
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Text(
+        title: const Text(
           'My Course',
           style: TextStyle(
             color: Colors.white,
@@ -33,7 +33,10 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const ContainerUnderAppbar(),
+            ContainerUnderAppbar(
+              containerHeight: 150,
+              text: '',
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -43,34 +46,34 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
             ),
             CourseScreenTopic(
               percentrdegree: .8,
-              containerColor: Color(0xffFFEA7D),
+              containerColor: const Color(0xffFFEA7D),
               title: 'Design Thingking Fundamental',
               personName: 'Dianne Russell',
               noteAboutCourse: 'Label',
-              noteColor: Color(0xff00A9B7),
-              shadeColor: Color(0xffDCF3F5),
+              noteColor: const Color(0xff00A9B7),
+              shadeColor: const Color(0xffDCF3F5),
               progress: '20/29 lesson',
               dueTime: 'November 2, 2021',
             ),
             CourseScreenTopic(
               percentrdegree: .3,
-              containerColor: Color(0xffDCF3F5),
+              containerColor: const Color(0xffDCF3F5),
               title: 'Design Thingking Fundamental',
               personName: 'Dianne Russell',
               noteAboutCourse: 'Label',
-              noteColor: Color(0xff00A9B7),
-              shadeColor: Color(0xffDCF3F5),
+              noteColor: const Color(0xff00A9B7),
+              shadeColor: const Color(0xffDCF3F5),
               progress: '7/32 lesson',
               dueTime: 'August 24, 2021',
             ),
             CourseScreenTopic(
               percentrdegree: .6,
-              containerColor: Color(0xffFFB099),
+              containerColor: const Color(0xffFFB099),
               title: 'Design Thingking Fundamental',
               personName: 'Dianne Russell',
               noteAboutCourse: 'Label',
-              noteColor: Color(0xff00A9B7),
-              shadeColor: Color(0xffDCF3F5),
+              noteColor: const Color(0xff00A9B7),
+              shadeColor: const Color(0xffDCF3F5),
               progress: '28/40 lesson',
               dueTime: 'August 24, 2021',
             ),

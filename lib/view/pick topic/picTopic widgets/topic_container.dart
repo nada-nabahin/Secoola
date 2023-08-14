@@ -27,28 +27,31 @@ class _TopicContainerState extends State<TopicContainer> {
       },
       child: Column(
         children: [
-          Container(
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.white,
-              border: isSelected
-                  ? Border.all(color: Color(0xff00A9B7), width: 2)
-                  : null, // No border when not selected
-            ),
-            child: Stack(
-              alignment: Alignment.topRight,
-              children: [
-                Center(
+          Stack(
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  border: isSelected
+                      ? Border.all(color: Color(0xff00A9B7), width: 2)
+                      : null, 
+                ),
+                child: Center(
                   child: Image(
                     image: AssetImage(widget.imageLink),
                     width: 24,
                     height: 24,
                   ),
                 ),
-                if (isSelected)
-                  Container(
+              ),
+              if (isSelected)
+                Positioned(
+                  top: -10,
+                  right: -10,
+                  child: Container(
                     width: 24,
                     height: 24,
                     decoration: BoxDecoration(
@@ -57,8 +60,8 @@ class _TopicContainerState extends State<TopicContainer> {
                     ),
                     child: Icon(Icons.check, color: Colors.white, size: 16),
                   ),
-              ],
-            ),
+                ),
+            ],
           ),
           const SizedBox(
             height: 10,

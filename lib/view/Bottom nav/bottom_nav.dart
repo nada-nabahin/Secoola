@@ -13,7 +13,6 @@ class _BottomNavManagerState extends State<BottomNavManager> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: ScreenManager.screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -27,11 +26,11 @@ class _BottomNavManagerState extends State<BottomNavManager> {
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.circle),
+            icon: Icon(Icons.explore),
             label: 'Explore',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.circle),
+            icon: Icon(Icons.book),
             label: 'My course',
           ),
           BottomNavigationBarItem(
