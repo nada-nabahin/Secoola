@@ -26,7 +26,7 @@ class BackArrowAndTitle extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                 ),
               ),

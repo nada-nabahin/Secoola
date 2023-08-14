@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/Registeration%20screens/signin.dart';
-import 'package:secoola_app/view/pick_topic.dart';
+import 'package:secoola_app/view/pick%20topic/pick_topic.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 
 import '../reset_password.dart';

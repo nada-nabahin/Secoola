@@ -6,7 +6,7 @@ import 'package:secoola_app/view/widgets/CategoryTopicConatiner.dart';
 import 'package:secoola_app/view/widgets/Notification_Container.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/SearchTextButton.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
-import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 import 'package:secoola_app/view/widgets/listView_item.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';

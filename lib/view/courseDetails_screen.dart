@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
 import 'package:secoola_app/view/widgets/bottomContainer.dart';
-import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 import 'package:secoola_app/view/widgets/person_widget.dart';

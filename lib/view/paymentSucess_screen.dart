@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 
 class PaymentSucess extends StatelessWidget {
   const PaymentSucess({super.key});

@@ -4,7 +4,7 @@ import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/registeration_form.dart';
 import 'package:secoola_app/view/Registeration%20screens/reset_password.dart';
 import 'package:secoola_app/view/home_screen.dart';
-import 'package:secoola_app/view/pick_topic.dart';
+import 'package:secoola_app/view/pick%20topic/pick_topic.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
