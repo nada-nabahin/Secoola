@@ -3,7 +3,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
-import 'package:secoola_app/view/widgets/onBoarding_text.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 
 class BottomSheet extends StatelessWidget {
   const BottomSheet({super.key});

@@ -18,6 +18,7 @@ class OnBoardingButtons extends StatelessWidget {
               Get.to(SignUp());
             },
             style: OutlinedButton.styleFrom(
+              backgroundColor: Color(0xff00A9B7),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -26,7 +27,7 @@ class OnBoardingButtons extends StatelessWidget {
             child: const Text(
               'Let\'s get started',
               style: TextStyle(
-                color: Color(0xff00A9B7),
+                color: Colors.white,
                 fontSize: 16,
               ),
             ),

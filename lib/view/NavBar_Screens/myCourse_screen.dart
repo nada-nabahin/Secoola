@@ -37,10 +37,7 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
             const SizedBox(
               height: 20,
             ),
-            const TabBarVieWidget(
-              tabLabel: 'Ongoing',
-              tabLabel2: 'Complete',
-            ),
+            const TabBarVieWidget(),
             const SizedBox(
               height: 40,
             ),

@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/widgets/bottomContainer.dart';
 
 /////////////THIS TABBAR FOR MY COURSE SCREEN////////////////////
 
-class TabBarVieWidget extends StatefulWidget {
-  const TabBarVieWidget({
+class TabBarForCourseDetails extends StatefulWidget {
+  const TabBarForCourseDetails({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<TabBarVieWidget> createState() => _TabBarVieWidgetState();
+  State<TabBarForCourseDetails> createState() => _TabBarVieWidgetState();
 }
 
-class _TabBarVieWidgetState extends State<TabBarVieWidget>
+class _TabBarVieWidgetState extends State<TabBarForCourseDetails>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -58,7 +59,7 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                           width: 158,
                           height: 38,
                           alignment: Alignment.center,
-                          child: Text('Ongoing'),
+                          child: Text('Curriculum'),
                         ),
                       ),
                       Tab(
@@ -66,7 +67,7 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                           width: 158,
                           height: 38,
                           alignment: Alignment.center,
-                          child: Text('Complete'),
+                          child: Text('Review'),
                         ),
                       ),
                     ],

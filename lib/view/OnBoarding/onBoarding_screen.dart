@@ -5,8 +5,8 @@ import 'package:secoola_app/view/Registeration%20screens/signin.dart';
 import 'package:secoola_app/view/Registeration%20screens/signup.dart';
 import 'package:secoola_app/view/home_screen.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
-import 'package:secoola_app/view/widgets/onBoardingButtons.dart';
-import 'package:secoola_app/view/widgets/onBoarding_text.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoardingButtons.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {

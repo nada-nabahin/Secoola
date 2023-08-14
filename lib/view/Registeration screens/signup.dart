@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/icon_container.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/registeration_form.dart';
 import 'package:secoola_app/view/Registeration%20screens/signin.dart';
 import 'package:secoola_app/view/home_screen.dart';
 import 'package:secoola_app/view/pick_topic.dart';
@@ -50,26 +52,17 @@ class _SignUpState extends State<SignUp> {
             const SizedBox(
               height: 60,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 55, right: 55),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.facebook,
-                    size: 38,
-                  ),
-                  SizedBox(width: 80),
-                  Icon(
-                    Icons.apple,
-                    size: 38,
-                  ),
-                  SizedBox(width: 80),
-                  Icon(
-                    Icons.android,
-                    size: 38,
-                  )
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconContainer(
+                  imageLink: 'assets/iconImages/google.png',
+                ),
+                IconContainer(imageLink: 'assets/iconImages/facebook.png'),
+                IconContainer(
+                  imageLink: 'assets/iconImages/apple-logo.png',
+                ),
+              ],
             ),
             const SizedBox(
               height: 55,
@@ -86,125 +79,11 @@ class _SignUpState extends State<SignUp> {
               height: 55,
             ),
             //sign up form
-            SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                child: Form(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: 335,
-                        height: 52,
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            labelText: 'Your email',
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: const BorderSide(
-                                color: Color(0xff00A9B7),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                            prefixIcon: Icon(
-                              Icons.email,
-                              color: Color(0xff00A9B7),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        width: 335,
-                        height: 52,
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            labelText: 'Your password',
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: const BorderSide(
-                                color: Color(0xff00A9B7),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20),
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            ),
-                            prefixIcon: const Icon(
-                              Icons.lock,
-                              color: Color(0xff00A9B7),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      Container(
-                        width: 335,
-                        height: 52,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Get.to(PickTopic());
-                          },
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xff00A9B7),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        textAlign: TextAlign.center,
-                        'By continuing, you agree to our Terms & Conditions and Privacy Policy',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xffA9AEB2),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 110,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          Get.to(SignIn());
-                        },
-                        child: const Text(
-                          'I already have an account',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Color(0xff00A9B7),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
+              child: RegisterationForm(),
             ),
           ],
         ),

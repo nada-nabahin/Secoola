@@ -9,7 +9,7 @@ import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 import 'package:secoola_app/view/widgets/listView_item.dart';
-import 'package:secoola_app/view/widgets/onBoarding_text.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 import 'package:secoola_app/view/widgets/title_seeAll.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,16 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           toolbarHeight: 190, // Set this height
-          backgroundColor: Color(0xffFAFAFA),
+          backgroundColor: const Color(0xffFAFAFA),
           elevation: 0,
           automaticallyImplyLeading: false,
           flexibleSpace: Container(
             height: 180,
             width: double.infinity,
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 16,
             ),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -47,21 +47,21 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color(0xff00A9B7),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 15),
+              padding: const EdgeInsets.symmetric(vertical: 15),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         'Hi,Dimas',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () {
                           _shoppingBottomSheet(context);
@@ -73,12 +73,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: CircleButton(
                             circleButtonColor:
-                                Color.fromRGBO(112, 112, 112, 0.2),
+                                const Color.fromRGBO(112, 112, 112, 0.2),
                             icon: Icons.shopping_cart,
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       GestureDetector(
@@ -92,32 +92,32 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           child: CircleButton(
                             circleButtonColor:
-                                Color.fromRGBO(112, 112, 112, 0.2),
+                                const Color.fromRGBO(112, 112, 112, 0.2),
                             icon: Icons.notifications,
                           ),
                         ),
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "Let\'s start learning!",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                     ),
                   ),
-                  Spacer(),
-                  SearchTextButton(),
+                  const Spacer(),
+                  const SearchTextButton(),
                 ],
               ),
             ),
           ),
         ),
-        backgroundColor: Color(0xffFAFAFA),
+        backgroundColor: const Color(0xffFAFAFA),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 180,
               ),
               Title_seeAll(
@@ -131,12 +131,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Get.to(CourseDetailsScreen());
+                        Get.to(const CourseDetailsScreen());
                       },
                       child: ListViewItem(
                         containerHeight: 140,
                         containerWidth: 220,
-                        containerColor: Color(0xffFFEA7D),
+                        containerColor: const Color(0xffFFEA7D),
                         title: 'Design Thingking Fundamental',
                         personName: 'Robert Fix',
                         price: '\$150',
@@ -194,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             topicName: 'Health'),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
@@ -226,18 +226,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xff86F2CB),
+                      containerColor: const Color(0xff86F2CB),
                       title: 'Design Thingking F...',
                       personName: 'Dianne Russell',
                       price: '\$75',
                       noteAboutPrice: 'Best deal',
-                      shadeColor: Color(0xffDCF3F5),
-                      noteColor: Color(0xff00A9B7),
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffFCE2EA),
+                      containerColor: const Color(0xffFCE2EA),
                       title: 'Figma Prototyping 1...',
                       personName: 'Jacob Jones',
                       price: '\$32',
@@ -248,13 +248,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffFFB099),
+                      containerColor: const Color(0xffFFB099),
                       title: 'UI UX Design Essentials',
                       personName: 'Esther Howard',
                       price: '\$83',
                       noteAboutPrice: 'deal',
-                      shadeColor: Color(0xffDCF3F5),
-                      noteColor: Color(0xff00A9B7),
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
                   ],
                 ),
@@ -271,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffFFEA7D),
+                      containerColor: const Color(0xffFFEA7D),
                       title: 'Flutter Class - Adv...',
                       personName: 'Cameron Williamson',
                       price: '\$97',
@@ -282,24 +282,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xff86F2CB),
+                      containerColor: const Color(0xff86F2CB),
                       title: 'Python Class - Adv...',
                       personName: 'Brooklyn Simmons',
                       price: '\$56',
                       noteAboutPrice: 'Most sold',
-                      shadeColor: Color(0xffDCF3F5),
-                      noteColor: Color(0xff00A9B7),
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffFFEA7D),
+                      containerColor: const Color(0xffFFEA7D),
                       title: 'Swift Class - Adv...',
                       personName: 'Cameron Williamson',
                       price: '\$41',
                       noteAboutPrice: 'Label',
-                      shadeColor: Color(0xffDCF3F5),
-                      noteColor: Color(0xff00A9B7),
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
                   ],
                 ),
@@ -317,18 +317,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffFFB099),
+                      containerColor: const Color(0xffFFB099),
                       title: 'Digital Marketing S...',
                       personName: 'Esther Howard',
                       price: '\$49',
                       noteAboutPrice: 'Hot deals',
-                      shadeColor: Color(0xffFCE2EA),
-                      noteColor: Color(0xffFF6666),
+                      shadeColor: const Color(0xffFCE2EA),
+                      noteColor: const Color(0xffFF6666),
                     ),
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffD0B2FF),
+                      containerColor: const Color(0xffD0B2FF),
                       title: 'Personal Branding F...',
                       personName: 'Savannah Nguyen',
                       price: '\$66',
@@ -339,13 +339,13 @@ class _HomeScreenState extends State<HomeScreen> {
                     ListViewItem(
                       containerHeight: 100,
                       containerWidth: 142,
-                      containerColor: Color(0xffA3CCDE),
+                      containerColor: const Color(0xffA3CCDE),
                       title: 'Neuromarketing & Ma... ',
                       personName: 'Arlene McCoy',
                       price: '\$41',
                       noteAboutPrice: 'Label',
-                      shadeColor: Color(0xffDCF3F5),
-                      noteColor: Color(0xff00A9B7),
+                      shadeColor: const Color(0xffDCF3F5),
+                      noteColor: const Color(0xff00A9B7),
                     ),
                   ],
                 ),
@@ -480,7 +480,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 20,
                       left: 15,
                       right: 15,
@@ -488,18 +488,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           'Notification',
                           style: TextStyle(fontSize: 24),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
-                        Text(
+                        const Text(
                           'Today',
                           style: TextStyle(fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         NotificationContainer(
@@ -507,7 +507,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           text2: 'Start your course now.',
                           notificationIcon: Icons.payment,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         NotificationContainer(
@@ -515,14 +515,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           text2: 'Continue you recent course. ',
                           notificationIcon: Icons.notifications,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
-                        Text(
+                        const Text(
                           'Yesterday',
                           style: TextStyle(fontSize: 18),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         NotificationContainer(
@@ -530,7 +530,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           text2: 'Go to account page to down...',
                           notificationIcon: Icons.file_download_outlined,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15,
                         ),
                         NotificationContainer(

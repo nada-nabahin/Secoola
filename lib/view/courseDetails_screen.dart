@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
+import 'package:secoola_app/view/widgets/bottomContainer.dart';
 import 'package:secoola_app/view/widgets/colorContenerOnbording.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
-import 'package:secoola_app/view/widgets/onBoarding_text.dart';
+import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 import 'package:secoola_app/view/widgets/person_widget.dart';
 import 'package:secoola_app/view/widgets/tabBar.dart';
+import 'package:secoola_app/view/widgets/tabbar_for_courseDetails.dart';
 
 class CourseDetailsScreen extends StatefulWidget {
   const CourseDetailsScreen({super.key});
@@ -209,13 +211,13 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                       ),
                       const Padding(
                         padding: EdgeInsets.only(right: 20),
-                        child: TabBarVieWidget(
-                            tabLabel: 'Curriculum', tabLabel2: 'Review'),
+                        child: Column(
+                          children: [
+                            TabBarForCourseDetails(),
+                            //  BottomContainer(),
+                          ],
+                        ),
                       ),
-                      Container(
-                        color: Colors.amber,
-                        height: 500,
-                      )
                     ],
                   ),
                 ),
