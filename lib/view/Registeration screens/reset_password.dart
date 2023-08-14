@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/Registeration%20screens/recovery_code.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
@@ -21,33 +22,7 @@ class _ResetPasswordState extends State<ResetPassword> {
           const SizedBox(
             height: 60,
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 20),
-            child: Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: const Icon(
-                    Icons.arrow_back_ios,
-                    size: 24,
-                  ),
-                ),
-                const Expanded(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Reset password',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          BackArrowAndTitle(title: 'Reset Password'),
           const SizedBox(
             height: 80,
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 
@@ -18,22 +19,7 @@ class _NewPasswordState extends State<NewPassword> {
           const SizedBox(
             height: 60,
           ),
-          const Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 20.0),
-                child: Icon(Icons.arrow_back_ios),
-              ),
-              SizedBox(
-                width: 60,
-              ),
-              Text(
-                textAlign: TextAlign.center,
-                'New password',
-                style: TextStyle(color: Colors.black, fontSize: 16),
-              ),
-            ],
-          ),
+          BackArrowAndTitle(title: 'New password'),
           const SizedBox(
             height: 80,
           ),

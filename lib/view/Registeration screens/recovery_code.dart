@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
 import 'package:secoola_app/view/Registeration%20screens/new_password.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 
@@ -25,33 +26,7 @@ class _RecoveryCodeState extends State<RecoveryCode> {
           const SizedBox(
             height: 60,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    Get.back();
-                  },
-                  child: const Icon(
-                    Icons.arrow_back_ios,
-                    size: 24,
-                  ),
-                ),
-                const Expanded(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      'Verify',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          BackArrowAndTitle(title: 'Verify'),
           const SizedBox(
             height: 80,
           ),
