@@ -19,7 +19,7 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       backgroundColor: Color(0xffFAFAFA),
       body: Padding(
-        padding: EdgeInsets.only(left: .5),
+        padding: EdgeInsets.only(left: 5),
         child: Column(
           children: [
             const Column(
@@ -83,7 +83,12 @@ class _SignUpState extends State<SignUp> {
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: RegisterationForm(),
+              child: RegisterationForm(
+                buttonLabel: 'Sign up',
+                onPressed: () {
+                  Get.to(PickTopic());
+                },
+              ),
             ),
           ],
         ),

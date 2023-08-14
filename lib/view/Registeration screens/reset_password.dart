@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/Registeration%20screens/recovery_code.dart';
+import 'package:secoola_app/view/widgets/commonButton.dart';
 
 class ResetPassword extends StatefulWidget {
   const ResetPassword({super.key});
@@ -27,12 +29,12 @@ class _ResetPasswordState extends State<ResetPassword> {
                   onTap: () {
                     Get.back();
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios,
                     size: 24,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
@@ -80,57 +82,19 @@ class _ResetPasswordState extends State<ResetPassword> {
           const SizedBox(
             height: 80,
           ),
-          Container(
-            width: 335,
-            height: 52,
-            child: TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Your email',
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: const BorderSide(
-                    color: Color(0xff00A9B7),
-                  ),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(
-                    color: Colors.transparent,
-                  ),
-                ),
-                prefixIcon: Icon(
-                  Icons.email,
-                  color: Color(0xff00A9B7),
-                ),
-              ),
-            ),
+          RegisterationTextField(
+            label: 'Your email',
+            textfieldIcon: Icons.lock,
           ),
           const SizedBox(
             height: 30,
           ),
-          Container(
-            width: 335,
-            height: 52,
-            child: ElevatedButton(
-              onPressed: () {
-                Get.to(RecoveryCode());
-              },
-              child: Text(
-                'Send verification code',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff00A9B7),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-          ),
+          CommonButton(
+            buttonLabel: 'Send verification code',
+            onPressed: () {
+              Get.to(RecoveryCode());
+            },
+          )
         ],
       ),
     );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
+import 'package:secoola_app/view/widgets/commonButton.dart';
 
 class NewPassword extends StatefulWidget {
   const NewPassword({super.key});
@@ -66,41 +68,12 @@ class _NewPasswordState extends State<NewPassword> {
           const SizedBox(
             height: 80,
           ),
-          Container(
-            width: 335,
-            height: 52,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: const InputDecoration(
-                labelText: 'Your email',
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(
-                  Icons.email,
-                  color: Color(0xff00A9B7),
-                ),
-              ),
-            ),
-          ),
+          RegisterationTextField(
+              label: 'Your email', textfieldIcon: Icons.email),
           const SizedBox(
             height: 30,
           ),
-          Container(
-            width: 335,
-            height: 52,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text('Set new password'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff00A9B7),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-          ),
+          CommonButton(buttonLabel: 'Set new password', onPressed: () {}),
         ],
       ),
     );

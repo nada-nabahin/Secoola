@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Registeration%20screens/signin.dart';
 import 'package:secoola_app/view/Registeration%20screens/signup.dart';
 
 class OnBoardingButtons extends StatelessWidget {
@@ -41,7 +42,7 @@ class OnBoardingButtons extends StatelessWidget {
           height: 52,
           child: OutlinedButton(
             onPressed: () {
-              Get.to(SignUp());
+              Get.to(SignIn());
             },
             style: OutlinedButton.styleFrom(
               shape: RoundedRectangleBorder(

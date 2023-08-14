@@ -19,7 +19,7 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       backgroundColor: const Color(0xffFAFAFA),
       body: Padding(
-        padding: const EdgeInsets.only(left: .5),
+        padding: EdgeInsets.all(20),
         child: Column(
           children: [
             const Column(
@@ -28,13 +28,23 @@ class _SignInState extends State<SignIn> {
                 SizedBox(
                   height: 100,
                 ),
-                Text(
-                  'Welcome back',
-                  style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.black,
-                  ),
-                  textAlign: TextAlign.start,
+                Row(
+                  children: [
+                    Text(
+                      'Welcome back',
+                      style: TextStyle(
+                        fontSize: 24,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                    SizedBox(width: 15),
+                    Image(
+                      image: AssetImage('assets/iconImages/wave.png'),
+                      height: 24,
+                      width: 24,
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: 10,
@@ -79,12 +89,17 @@ class _SignInState extends State<SignIn> {
             const SizedBox(
               height: 55,
             ),
-            //sign up form
+            //sign up forms
             Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: RegisterationForm(),
+              child: RegisterationForm(
+                buttonLabel: 'Login',
+                onPressed: () {
+                  Get.to(PickTopic());
+                },
+              ),
             ),
           ],
         ),

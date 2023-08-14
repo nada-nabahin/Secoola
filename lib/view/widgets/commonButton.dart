@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
   String buttonLabel;
-  CommonButton({super.key, required this.buttonLabel});
+  final VoidCallback onPressed;
+  CommonButton({
+    super.key,
+    required this.buttonLabel,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +15,7 @@ class CommonButton extends StatelessWidget {
       width: 335,
       height: 52,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           backgroundColor: Color(0xff00A9B7),
           shape: RoundedRectangleBorder(

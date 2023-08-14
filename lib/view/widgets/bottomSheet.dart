@@ -70,7 +70,10 @@ class BottomSheet extends StatelessWidget {
                       SizedBox(
                         height: 75,
                       ),
-                      CommonButton(buttonLabel: 'Explore course'),
+                      CommonButton(
+                        buttonLabel: 'Explore course',
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                 ),

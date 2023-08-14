@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Registeration%20screens/new_password.dart';
+import 'package:secoola_app/view/widgets/commonButton.dart';
 
 class RecoveryCode extends StatefulWidget {
   const RecoveryCode({Key? key});
@@ -24,19 +26,19 @@ class _RecoveryCodeState extends State<RecoveryCode> {
             height: 60,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
                 GestureDetector(
                   onTap: () {
                     Get.back();
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios,
                     size: 24,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
@@ -50,10 +52,10 @@ class _RecoveryCodeState extends State<RecoveryCode> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
-          Column(
+          const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -81,43 +83,29 @@ class _RecoveryCodeState extends State<RecoveryCode> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               _buildDigitTextField(_digitController1),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               _buildDigitTextField(_digitController2),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               _buildDigitTextField(_digitController3),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               _buildDigitTextField(_digitController4),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Container(
-            width: 335,
-            height: 52,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Verify',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff00A9B7),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-          ),
+          CommonButton(
+              buttonLabel: 'Verify',
+              onPressed: () {
+                Get.to(const NewPassword());
+              }),
           const SizedBox(
             height: 60,
           ),

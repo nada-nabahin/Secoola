@@ -292,7 +292,10 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                       SizedBox(
                         height: 75,
                       ),
-                      CommonButton(buttonLabel: 'Explore course'),
+                      CommonButton(
+                        buttonLabel: 'Explore course',
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                 ),
