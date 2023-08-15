@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/myCourse_screen.dart';
+import 'package:secoola_app/view/Bottom%20nav/bottom_nav.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 
 class PaymentSucess extends StatelessWidget {
@@ -79,7 +80,7 @@ class PaymentSucess extends StatelessWidget {
             height: 40,
           ),
           GestureDetector(
-            onTap: (){
+            onTap: () {
               Get.to(BottomNavManager());
             },
             child: const Text(
