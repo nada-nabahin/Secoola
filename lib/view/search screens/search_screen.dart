@@ -16,6 +16,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffFAFAFA),
       body: Padding(
         padding: const EdgeInsets.all(30),
         child: Column(
@@ -97,13 +98,32 @@ class SearchScreen extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    ListTileTitle(title: 'Art'),
-                    ListTileTitle(title: 'Coding'),
-                    ListTileTitle(title: 'Design'),
-                    ListTileTitle(title: 'Marketing'),
-                    ListTileTitle(title: 'Lifestyle'),
-                    ListTileTitle(title: 'Health'),
-                    ListTileTitle(title: 'Business'),
+                    ListTileTitle(
+                        topicName: 'Art',
+                        imageLink: 'assets/iconImages/paint.png'),
+                    ListTileTitle(
+                        topicName: 'Coding',
+                        imageLink: 'assets/iconImages/desktop.png'),
+                    ListTileTitle(
+                      topicName: 'Design',
+                      imageLink: 'assets/iconImages/palette.png',
+                    ),
+                    ListTileTitle(
+                      topicName: 'Health',
+                      imageLink: 'assets/iconImages/mental-health.png',
+                    ),
+                    ListTileTitle(
+                      topicName: 'Lifestyle',
+                      imageLink: 'assets/iconImages/mental-health.png',
+                    ),
+                    ListTileTitle(
+                      topicName: 'Business',
+                      imageLink: 'assets/iconImages/business.png',
+                    ),
+                    ListTileTitle(
+                      topicName: 'Gaming',
+                      imageLink: 'assets/iconImages/game-controller.png',
+                    ),
                   ],
                 ),
               ),

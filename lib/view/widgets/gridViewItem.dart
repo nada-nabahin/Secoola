@@ -24,10 +24,10 @@ class GridViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: const EdgeInsets.only(left: 10),
       child: Container(
         width: containerWidth,
-        height: 224,
+        height: 190,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
@@ -37,7 +37,6 @@ class GridViewItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //color container
             Container(
               width: containerWidth,
               height: 100,
@@ -45,9 +44,8 @@ class GridViewItem extends StatelessWidget {
                 top: 10,
                 left: 10,
                 right: 10,
-              ), // Add space from the top, right, and left
+              ),
               decoration: BoxDecoration(
-                //container color
                 color: containerColor,
                 borderRadius: BorderRadius.all(
                   Radius.circular(20),
@@ -55,8 +53,7 @@ class GridViewItem extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment
-                    .start, // Align the Row to the top of the container
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: 49,
@@ -111,6 +108,7 @@ class GridViewItem extends StatelessWidget {
                 left: 7,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     //title under the container
@@ -177,6 +175,9 @@ class GridViewItem extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 8,
+            )
           ],
         ),
       ),

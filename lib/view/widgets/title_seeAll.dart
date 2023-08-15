@@ -12,7 +12,7 @@ class Title_seeAll extends StatelessWidget {
       padding: const EdgeInsets.only(
         top: 20,
         right: 20,
-        bottom: 20,
+        bottom: 15,
         left: 20,
       ),
       child: Row(

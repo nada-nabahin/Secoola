@@ -76,6 +76,7 @@ class GridWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return GridViewItem(
           containerWidth: 158,
+          
           containerColor: itemList[index]['containerColor'],
           title: itemList[index]['title'],
           personName: itemList[index]['personName'],

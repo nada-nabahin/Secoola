@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
 import 'package:secoola_app/view/courseDetails_screen.dart';
@@ -47,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 top: 5,
               ),
               child: CircleButton(
-                circleButtonColor: const Color.fromRGBO(112, 112, 112, 0.2),
+                circleButtonColor: const Color.fromRGBO(112, 112, 112, 0.3),
                 icon: Icons.shopping_cart,
               ),
             ),
@@ -65,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 top: 5,
               ),
               child: CircleButton(
-                circleButtonColor: const Color.fromRGBO(112, 112, 112, 0.2),
+                circleButtonColor: const Color.fromRGBO(112, 112, 112, .3),
                 icon: Icons.notifications,
               ),
             ),
@@ -82,11 +81,12 @@ class _HomeScreenState extends State<HomeScreen> {
               containerHeight: 180,
               text: " Let\'s start learning!",
             ),
+
+            //first listview
             Title_seeAll(
               title: 'Popular course',
               textButton_word: 'See All',
             ),
-
             Container(
               height: 230,
               child: ListView(
@@ -122,65 +122,65 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
+
+            //horizontal categories
             Title_seeAll(
               title: 'Categories',
               textButton_word: 'See All',
             ),
 
             //i'll replace with list view
-            /////////////////////////////////////////////
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.art_track, topicName: 'Art'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.laptop, topicName: 'Coding'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.health_and_safety,
-                          topicName: 'Health'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.health_and_safety,
-                          topicName: 'Health'),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.art_track, topicName: 'Art'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.laptop, topicName: 'Coding'),
-                      CategoryTopicConatiner(
-                          topicIcon: Icons.design_services,
-                          topicName: 'Design'),
-                    ],
-                  ),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/paint.png',
+                            topicName: 'Art'),
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/desktop.png',
+                            topicName: 'Coding'),
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/palette.png',
+                            topicName: 'Design'),
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/mental-health.png',
+                            topicName: 'Health'),
+                        CategoryTopicConatiner(
+                          imageLink: 'assets/iconImages/business.png',
+                          topicName: 'Business',
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/music.png',
+                            topicName: 'Music'),
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/football.png',
+                            topicName: 'Sport'),
+                        CategoryTopicConatiner(
+                            imageLink: 'assets/iconImages/game-controller.png',
+                            topicName: 'Gaming'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
 
+            //2nd listview
             Title_seeAll(
               title: 'Your topic',
               textButton_word: 'See All',
             ),
-            /////////////////////////////////////////////
-
             Container(
               height: 190,
               child: ListView(
@@ -222,6 +222,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+
+            //3rd listview
             Title_seeAll(
               title: 'Your topic',
               textButton_word: 'See All',
@@ -268,6 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
+            //4th listview
             Title_seeAll(
               title: 'Your topic',
               textButton_word: 'See All',
@@ -321,6 +324,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  //BOTTOM SHEETS//
 
   /// shopping Bottom Sheet/////////
   void _shoppingBottomSheet(BuildContext context) {
@@ -399,6 +404,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  /// notification Bottom Sheet/////////
   void _notificationBottomSheet(BuildContext context) {
     showModalBottomSheet(
       backgroundColor: Colors.transparent,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/home_screen.dart';
 import 'package:secoola_app/view/pick%20topic/picTopic%20widgets/topic_container.dart';
 import 'package:secoola_app/view/Bottom%20nav/bottom_nav.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';

@@ -4,17 +4,18 @@ import 'package:secoola_app/view/widgets/appBar_widgets/SearchTextButton.dart';
 class ContainerUnderAppbar extends StatelessWidget {
   double containerHeight;
   String text;
-  ContainerUnderAppbar({super.key, required this.containerHeight, required this.text});
+  ContainerUnderAppbar(
+      {super.key, required this.containerHeight, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: containerHeight,
       width: double.infinity,
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 16,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
@@ -24,19 +25,19 @@ class ContainerUnderAppbar extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Spacer(),
+          const Spacer(),
           Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 24,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           const SearchTextButton(),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/notification_screen.dart';
 
 class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile"),
+        title: const Text("Profile"),
         automaticallyImplyLeading: false,
       ),
       body: Container(
@@ -13,7 +16,7 @@ class AccountScreen extends StatelessWidget {
         child: ListView(
           children: [
             Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -21,8 +24,8 @@ class AccountScreen extends StatelessWidget {
                     radius: 30,
                     backgroundColor: Color(0xffFFEA7D),
                   ),
-                  SizedBox(width: 10),
-                  Column(
+                  const SizedBox(width: 10),
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -36,9 +39,9 @@ class AccountScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   IconButton(
-                    icon: Icon(Icons.edit),
+                    icon: const Icon(Icons.edit),
                     onPressed: () {},
                   ),
                 ],
@@ -80,18 +83,18 @@ class AccountScreen extends StatelessWidget {
             ),
             Center(
               child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
                     primary: Colors.red,
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                   ),
-                  child: Text("Sign Out", style: TextStyle(fontSize: 16)),
+                  child: const Text("Sign Out", style: TextStyle(fontSize: 16)),
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -113,7 +116,7 @@ class SettingsItem extends StatelessWidget {
       leading: Icon(icon),
       title: Text(title),
       trailing: hasArrow
-          ? Icon(
+          ? const Icon(
               Icons.arrow_forward_ios,
               size: 16,
             )
@@ -135,10 +138,10 @@ class SettingsGroup extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: EdgeInsets.fromLTRB(20, 15, 0, 10),
+          padding: const EdgeInsets.fromLTRB(20, 15, 0, 10),
           child: Text(
             title,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         ),
         Column(

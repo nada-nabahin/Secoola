@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/search%20screens/searchResult.button.dart';
 import 'package:secoola_app/view/widgets/gridView.dart';
 import 'package:secoola_app/view/widgets/searchTextField.dart';
 
@@ -9,9 +10,9 @@ class SearchResultScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFAFAFA),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -36,72 +37,14 @@ class SearchResultScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
-                      ),
-                      side: BorderSide(color: Color(0xff00A9B7)),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 25,
-                        vertical: 15,
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.filter,
-                            color: Color(0xff00A9B7),
-                          ),
-                          Text(
-                            '   Filter',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xff00A9B7),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(17),
-                      ),
-                      side: BorderSide(color: Color(0xff00A9B7)),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 25,
-                        vertical: 15,
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.sort_outlined,
-                            color: Color(0xff00A9B7),
-                          ),
-                          Text(
-                            '   Sort',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Color(0xff00A9B7),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  SearchResultButton(
+                      label: '   Filter', buttonIcon: Icons.filter),
+                  SearchResultButton(
+                      label: '   Sort', buttonIcon: Icons.sort_outlined),
                 ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              GridWidget(),
+              SizedBox(height: 20),
+              GridWidget()
             ],
           ),
         ),

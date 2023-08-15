@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/icon_container.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/registeration_form.dart';
 import 'package:secoola_app/view/Registeration%20screens/reset_password.dart';
-import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/home_screen.dart';
 import 'package:secoola_app/view/pick%20topic/pick_topic.dart';
 
 class SignIn extends StatefulWidget {

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/Registeration%20screens/signin.dart';
 import 'package:secoola_app/view/Registeration%20screens/signup.dart';
-import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/home_screen.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoardingButtons.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
