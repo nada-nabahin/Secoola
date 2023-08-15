@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -16,9 +17,9 @@ class BackArrowAndTitle extends StatelessWidget {
             onTap: () {
               Get.back();
             },
-            child: const Icon(
+            child: Icon(
               Icons.arrow_back_ios,
-              size: 24,
+              size: 24.h,
             ),
           ),
           Expanded(
@@ -26,8 +27,8 @@ class BackArrowAndTitle extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 16,
+                style: TextStyle(
+                  fontSize: 16.sp,
                 ),
               ),
             ),

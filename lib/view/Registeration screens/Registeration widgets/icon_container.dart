@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class IconContainer extends StatelessWidget {
   String imageLink;
@@ -7,16 +8,16 @@ class IconContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 98,
-      height: 52,
+      width: 98.w,
+      height: 52.h,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(17),
       ),
       child: Image(
         image: AssetImage(imageLink),
-        width: 28,
-        height: 28,
+        width: 28.w,
+        height: 28.h,
       ),
     );
   }

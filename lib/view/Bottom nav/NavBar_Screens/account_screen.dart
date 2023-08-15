@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/faq_screen.dart';
 import 'package:secoola_app/view/notification_screen.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -51,12 +52,19 @@ class AccountScreen extends StatelessWidget {
               title: "Account",
               settings: [
                 SettingsItem(
+                    onPressed: () {
+                      Get.to(NotificationScreen());
+                    },
                     icon: Icons.notifications,
                     title: "Notification",
                     hasArrow: true),
                 SettingsItem(
-                    icon: Icons.security, title: "Security", hasArrow: true),
+                    onPressed: () {},
+                    icon: Icons.security,
+                    title: "Security",
+                    hasArrow: true),
                 SettingsItem(
+                    onPressed: () {},
                     icon: Icons.email,
                     title: "Email Preference",
                     hasArrow: true),
@@ -66,19 +74,37 @@ class AccountScreen extends StatelessWidget {
               title: "Course",
               settings: [
                 SettingsItem(
-                    icon: Icons.school, title: "Certificate", hasArrow: true),
+                    onPressed: () {},
+                    icon: Icons.school,
+                    title: "Certificate",
+                    hasArrow: true),
                 SettingsItem(
-                    icon: Icons.payment, title: "Payment", hasArrow: true),
+                    onPressed: () {},
+                    icon: Icons.payment,
+                    title: "Payment",
+                    hasArrow: true),
                 SettingsItem(
-                    icon: Icons.history, title: "History", hasArrow: true),
+                    onPressed: () {},
+                    icon: Icons.history,
+                    title: "History",
+                    hasArrow: true),
               ],
             ),
             SettingsGroup(
               title: "Support",
               settings: [
-                SettingsItem(icon: Icons.help, title: "Help", hasArrow: true),
                 SettingsItem(
-                    icon: Icons.question_answer, title: "FAQ", hasArrow: true),
+                    onPressed: () {},
+                    icon: Icons.help,
+                    title: "Help",
+                    hasArrow: true),
+                SettingsItem(
+                    onPressed: () {
+                      Get.to(AccordionPage());
+                    },
+                    icon: Icons.question_answer,
+                    title: "FAQ",
+                    hasArrow: true),
               ],
             ),
             Center(
@@ -106,9 +132,13 @@ class SettingsItem extends StatelessWidget {
   final IconData icon;
   final String title;
   final bool hasArrow;
+  final VoidCallback onPressed;
 
   SettingsItem(
-      {required this.icon, required this.title, this.hasArrow = false});
+      {required this.icon,
+      required this.title,
+      this.hasArrow = false,
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -116,9 +146,12 @@ class SettingsItem extends StatelessWidget {
       leading: Icon(icon),
       title: Text(title),
       trailing: hasArrow
-          ? const Icon(
-              Icons.arrow_forward_ios,
-              size: 16,
+          ? GestureDetector(
+              onTap: onPressed,
+              child: const Icon(
+                Icons.arrow_forward_ios,
+                size: 16,
+              ),
             )
           : null,
       onTap: () {},

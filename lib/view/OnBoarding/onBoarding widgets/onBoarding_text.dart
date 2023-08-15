@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingText extends StatelessWidget {
   String firstText;
@@ -10,28 +11,27 @@ class OnBoardingText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 271,
+        width: 271.w,
         child: Column(
           children: [
             Text(
               firstText,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black,
-                fontSize: 24,
+                fontSize: 24.sp,
               ),
             ),
-            const SizedBox(
-              height: 25,
+            SizedBox(
+              height: 25.h,
             ),
             Text(
               secondText,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 14,
+              style: TextStyle(
+                fontSize: 14.sp,
                 color: Color(0xffA9AEB2),
               ),
             ),
-            
           ],
         ),
       ),

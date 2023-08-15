@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContenerColoeOnbordingCustom extends StatelessWidget {
   Color? color;
@@ -8,8 +9,8 @@ class ContenerColoeOnbordingCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 42.5),
-      width: 300,
-      height: 180,
+      width: 300.w,
+      height: 180.h,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(20),

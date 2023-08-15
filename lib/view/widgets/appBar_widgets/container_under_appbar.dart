@@ -13,7 +13,7 @@ class ContainerUnderAppbar extends StatelessWidget {
       height: containerHeight,
       width: double.infinity,
       padding: const EdgeInsets.symmetric(
-        horizontal: 16,
+        horizontal: 25,
       ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(

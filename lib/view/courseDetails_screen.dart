@@ -209,15 +209,7 @@ class _CourseDetailsScreenState extends State<CourseDetailsScreen> {
                       const SizedBox(
                         height: 60,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(right: 20),
-                        child: Column(
-                          children: [
-                            TabBarForCourseDetails(),
-                            //  BottomContainer(),
-                          ],
-                        ),
-                      ),
+                      
                     ],
                   ),
                 ),

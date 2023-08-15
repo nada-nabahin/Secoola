@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/icon_container.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/registeration_form.dart';
@@ -21,35 +22,35 @@ class _SignUpState extends State<SignUp> {
         padding: EdgeInsets.only(left: 5),
         child: Column(
           children: [
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 100,
+                  height: 100.h,
                 ),
                 Text(
                   'Create account',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 24.sp,
                     color: Colors.black,
                   ),
                   textAlign: TextAlign.start,
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Text(
                   'Create your account to start your course lessons.',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     color: Color(0xffA9AEB2),
                   ),
                   textAlign: TextAlign.start,
                 ),
               ],
             ),
-            const SizedBox(
-              height: 60,
+            SizedBox(
+              height: 60.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -63,19 +64,19 @@ class _SignUpState extends State<SignUp> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 55,
+            SizedBox(
+              height: 55.h,
             ),
-            const Text(
+            Text(
               textAlign: TextAlign.center,
               'Or sign up with your email',
               style: TextStyle(
                 color: Color(0xffA9AEB2),
-                fontSize: 14,
+                fontSize: 14.sp,
               ),
             ),
-            const SizedBox(
-              height: 55,
+            SizedBox(
+              height: 55.h,
             ),
             //sign up form
             Padding(

@@ -24,10 +24,11 @@ class GridViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
+        margin: EdgeInsets.only(left: 10),
         width: containerWidth,
-        height: 190,
+        height: 180,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),

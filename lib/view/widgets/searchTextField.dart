@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class SearchTextField extends StatelessWidget {
   String searchText;
   IconData searchIcon;
+  final VoidCallback onPressed;
+
   SearchTextField(
-      {Key? key, required this.searchIcon, required this.searchText})
+      {Key? key,
+      required this.searchIcon,
+      required this.searchText,
+      required this.onPressed})
       : super(key: key);
 
   @override
@@ -42,10 +47,13 @@ class SearchTextField extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(
-              searchIcon,
-              color: Colors.black,
-              size: 24,
+            GestureDetector(
+              onTap: onPressed,
+              child: Icon(
+                searchIcon,
+                color: Colors.black,
+                size: 24,
+              ),
             ),
           ],
         ),

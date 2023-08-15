@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
 import 'package:secoola_app/view/widgets/Notification_Container.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -16,10 +17,7 @@ class NotificationScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Notification',
-              style: TextStyle(fontSize: 24),
-            ),
+            BackArrowAndTitle(title: 'Notification'),
             const SizedBox(
               height: 30,
             ),

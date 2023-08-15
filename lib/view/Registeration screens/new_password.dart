@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
@@ -16,14 +17,14 @@ class _NewPasswordState extends State<NewPassword> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
           BackArrowAndTitle(title: 'New password'),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -31,33 +32,33 @@ class _NewPasswordState extends State<NewPassword> {
                 child: Text(
                   'Set your password',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 24.sp,
                     color: Colors.black,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Enter your email and a verification code to reset the password will be sent to your email.',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     color: Color(0xffA9AEB2),
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
           RegisterationTextField(
               label: 'Your email', textfieldIcon: Icons.email),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           CommonButton(buttonLabel: 'Set new password', onPressed: () {}),
         ],

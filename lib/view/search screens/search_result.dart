@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:secoola_app/view/search%20screens/searchResult.button.dart';
+import 'package:get/get.dart';
+import 'package:secoola_app/view/search%20screens/searchResult_button.dart';
 import 'package:secoola_app/view/widgets/gridView.dart';
 import 'package:secoola_app/view/widgets/searchTextField.dart';
 
@@ -16,10 +17,14 @@ class SearchResultScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 30,
+              const SizedBox(height: 30),
+              SearchTextField(
+                searchIcon: Icons.clear,
+                searchText: 'UX Design',
+                onPressed: () {
+                  Get.back();
+                },
               ),
-              SearchTextField(searchIcon: Icons.clear, searchText: 'UX Design'),
               const SizedBox(
                 height: 25,
               ),

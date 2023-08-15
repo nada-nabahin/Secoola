@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
@@ -23,14 +24,14 @@ class _RecoveryCodeState extends State<RecoveryCode> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
           BackArrowAndTitle(title: 'Verify'),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -38,28 +39,28 @@ class _RecoveryCodeState extends State<RecoveryCode> {
                 child: Text(
                   'Recovery code',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 24.sp,
                     color: Colors.black,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Check your inbox, we have sent the Verification code to your email.',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     color: Color(0xffA9AEB2),
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -73,18 +74,18 @@ class _RecoveryCodeState extends State<RecoveryCode> {
               _buildDigitTextField(_digitController4),
             ],
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           CommonButton(
               buttonLabel: 'Verify',
               onPressed: () {
                 Get.to(const NewPassword());
               }),
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
-          const Align(
+          Align(
             alignment: AlignmentDirectional.center,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -95,7 +96,7 @@ class _RecoveryCodeState extends State<RecoveryCode> {
                     'Not retrieve any code?',
                     style: TextStyle(
                       color: Color(0xffA9AEB2),
-                      fontSize: 14,
+                      fontSize: 14.sp,
                     ),
                   ),
                 ),
@@ -103,7 +104,7 @@ class _RecoveryCodeState extends State<RecoveryCode> {
                   'Resend code',
                   style: TextStyle(
                     color: Color(0xff00A9B7),
-                    fontSize: 14,
+                    fontSize: 14.sp,
                   ),
                 ),
               ],
@@ -116,8 +117,8 @@ class _RecoveryCodeState extends State<RecoveryCode> {
 
   Widget _buildDigitTextField(TextEditingController controller) {
     return SizedBox(
-      width: 69,
-      height: 52,
+      width: 69.w,
+      height: 52.w,
       child: TextField(
         controller: controller,
         keyboardType: TextInputType.number,

@@ -26,7 +26,10 @@ class WishlistScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-          ContainerUnderAppbar(containerHeight: 150, text: '',),
+            ContainerUnderAppbar(
+              containerHeight: 150,
+              text: '',
+            ),
             GridWidget(),
           ],
         ),

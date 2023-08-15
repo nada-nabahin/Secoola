@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CommonButton extends StatelessWidget {
   String buttonLabel;
@@ -12,8 +13,8 @@ class CommonButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 335,
-      height: 52,
+      width: 335.w,
+      height: 52.h,
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
@@ -25,9 +26,9 @@ class CommonButton extends StatelessWidget {
         ),
         child: Text(
           buttonLabel,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
-            fontSize: 16,
+            fontSize: 16.sp,
           ),
         ),
       ),

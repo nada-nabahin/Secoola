@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:secoola_app/view/widgets/bottomContainer.dart';
-import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 import 'package:secoola_app/view/widgets/itemes_detail.dart';
 import 'package:secoola_app/view/widgets/title_seeAll.dart';
 

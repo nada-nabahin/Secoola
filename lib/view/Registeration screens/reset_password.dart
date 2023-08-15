@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/backArrow_title.dart';
@@ -19,12 +20,12 @@ class _ResetPasswordState extends State<ResetPassword> {
     return Scaffold(
       body: Column(
         children: [
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
           BackArrowAndTitle(title: 'Reset Password'),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
           const Column(
             crossAxisAlignment: CrossAxisAlignment.start,

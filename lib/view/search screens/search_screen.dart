@@ -26,6 +26,7 @@ class SearchScreen extends StatelessWidget {
               height: 10,
             ),
             SearchTextField(
+              onPressed: () {},
               searchText: 'Search for anything',
               searchIcon: Icons.mic,
             ),

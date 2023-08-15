@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/Registeration%20screens/Registeration%20widgets/textField.dart';
 import 'package:secoola_app/view/Registeration%20screens/signin.dart';
@@ -25,13 +26,13 @@ class RegisterationForm extends StatelessWidget {
         children: [
           RegisterationTextField(
               label: 'Your email', textfieldIcon: Icons.email),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           RegisterationTextField(
               label: 'Your password', textfieldIcon: Icons.lock),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Container(
             alignment: Alignment.centerRight,
@@ -39,30 +40,30 @@ class RegisterationForm extends StatelessWidget {
               onTap: () {
                 Get.to(const ResetPassword());
               },
-              child: const Text(
+              child: Text(
                 'Forgot password?',
                 style: TextStyle(
                   color: Color(0xffA9AEB2),
-                  fontSize: 14,
+                  fontSize: 14.sp,
                 ),
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           CommonButton(buttonLabel: buttonLabel, onPressed: onPressed),
-          const SizedBox(
-            height: 120,
+          SizedBox(
+            height: 100.h,
           ),
           GestureDetector(
             onTap: () {
               Get.to(SignIn());
             },
-            child: const Text(
+            child: Text(
               'I already have an account',
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 14.sp,
                 color: Color(0xff00A9B7),
               ),
             ),

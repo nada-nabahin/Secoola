@@ -391,7 +391,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       CommonButton(
                         buttonLabel: 'Explore course',
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.back();
+                        },
                       ),
                     ],
                   ),

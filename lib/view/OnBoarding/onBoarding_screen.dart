@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:secoola_app/view/Registeration%20screens/signin.dart';
-import 'package:secoola_app/view/Registeration%20screens/signup.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoardingButtons.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
@@ -24,17 +21,17 @@ class _OnBoardingState extends State<OnBoarding> {
       backgroundColor: Color(0xffFAFAFA),
       body: Column(
         children: [
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
           SizedBox(
-            height: 16,
+            height: 16.h,
             child: SmoothPageIndicator(
               controller: _controller,
               count: 3,
-              effect: const WormEffect(
-                dotWidth: 105,
-                dotHeight: 4,
+              effect: WormEffect(
+                dotWidth: 105.w,
+                dotHeight: 4.h,
                 dotColor: Color.fromARGB(255, 165, 224, 230),
                 activeDotColor: Color(0xff00A9B7),
               ),
@@ -48,55 +45,55 @@ class _OnBoardingState extends State<OnBoarding> {
                   children: [
                     Spacer(),
                     ContenerColoeOnbordingCustom(color: Color(0xffFCE2EA)),
-                    const SizedBox(
-                      height: 100,
+                    SizedBox(
+                      height: 100.h,
                     ),
                     OnBoardingText(
                       firstText: 'Join and study together',
                       secondText:
                           'Find your best experience while studying and seeking knowledge in here',
                     ),
-                    const SizedBox(
-                      height: 80,
+                    SizedBox(
+                      height: 80.h,
                     ),
                   ],
                 ),
                 Column(
                   children: [
-                    const SizedBox(
-                      height: 135,
+                    SizedBox(
+                      height: 135.h,
                     ),
                     ContenerColoeOnbordingCustom(color: Color(0xffFFEA7D)),
-                    const SizedBox(
-                      height: 100,
+                    SizedBox(
+                      height: 100.h,
                     ),
                     OnBoardingText(
                       firstText: 'Find your mentors',
                       secondText:
                           'Find your best experience while studying and seeking knowledge in here',
                     ),
-                    const SizedBox(
-                      height: 80,
+                    SizedBox(
+                      height: 80.h,
                     ),
                   ],
                 ),
                 Column(
                   children: [
-                    const SizedBox(
-                      height: 135,
+                    SizedBox(
+                      height: 135.h,
                     ),
                     ContenerColoeOnbordingCustom(
                         color: const Color(0xffFD0B2FF)),
-                    const SizedBox(
-                      height: 100,
+                    SizedBox(
+                      height: 100.h,
                     ),
                     OnBoardingText(
                       firstText: 'Explore new knowledge',
                       secondText:
                           'Find your best experience while studying and seeking knowledge in here',
                     ),
-                    const SizedBox(
-                      height: 60,
+                    SizedBox(
+                      height: 60.h,
                     ),
                   ],
                 ),
@@ -105,7 +102,7 @@ class _OnBoardingState extends State<OnBoarding> {
           ),
           OnBoardingButtons(),
           SizedBox(
-            height: 60,
+            height: 58.h,
           ),
         ],
       ),

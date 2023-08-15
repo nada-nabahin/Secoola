@@ -40,6 +40,7 @@ dependencies:
   flutter_settings_screen_ex: ^0.0.1+5
   get: ^4.6.5
   flutter_screenutil: ^5.8.4
+  accordion: ^2.5.1
 
 dev_dependencies:
   flutter_test:

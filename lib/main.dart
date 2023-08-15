@@ -1,4 +1,7 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/courseCompleted_screen.dart';
 import 'package:secoola_app/view/courseDetails_screen.dart';
 import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/account_screen.dart';
@@ -13,11 +16,23 @@ import 'package:secoola_app/view/widgets/searchTextField.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(
-    GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAFAFA)),
-      home: OnBoarding(),
-    ),
-  );
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext) {
+    return ScreenUtilInit(
+        minTextAdapt: true,
+        splitScreenMode: true,
+        designSize: const Size(390, 844),
+        builder: (context, child) {
+          return const GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: PaymentScreen(),
+          );
+        });
+  }
 }

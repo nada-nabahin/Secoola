@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RegisterationTextField extends StatelessWidget {
   String label;
@@ -9,8 +10,8 @@ class RegisterationTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 335,
-      height: 52,
+      width: 335.w,
+      height: 52.h,
       child: TextFormField(
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
