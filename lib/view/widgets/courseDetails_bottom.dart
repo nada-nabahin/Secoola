@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/wishlist_screen.dart';
 import 'package:secoola_app/view/paymentSucess_screen.dart';
+import 'package:secoola_app/view/payment_screen.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
 
 class CourseDetailsBottomContainer extends StatelessWidget {
@@ -62,11 +64,19 @@ class CourseDetailsBottomContainer extends StatelessWidget {
             ),
             Row(
               children: [
-                CourseDetailsButton(label: 'Add to cart'),
+                GestureDetector(
+                    onTap: () {
+                      Get.to(PaymentScreen());
+                    },
+                    child: CourseDetailsButton(label: 'Add to cart')),
                 SizedBox(
                   width: 20.w,
                 ),
-                CourseDetailsButton(label: 'Add to wishlist'),
+                GestureDetector(
+                    onTap: () {
+                      Get.to(WishlistScreen());
+                    },
+                    child: CourseDetailsButton(label: 'Add to wishlist')),
               ],
             ),
             SizedBox(

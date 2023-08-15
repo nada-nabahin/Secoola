@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
-import 'package:secoola_app/view/courseDetails_screen.dart';
+import 'package:secoola_app/view/details_course_screen.dart';
 import 'package:secoola_app/view/widgets/CategoryTopicConatiner.dart';
 import 'package:secoola_app/view/widgets/Notification_Container.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/SearchTextButton.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/circle_button.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';
+import 'package:secoola_app/view/widgets/courseDetails_bottom.dart';
 import 'package:secoola_app/view/widgets/listView_item.dart';
 import 'package:secoola_app/view/widgets/title_seeAll.dart';
 
@@ -94,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Get.to(const CourseDetailsScreen());
+                      Get.to(const CourseDetails());
                     },
                     child: ListViewItem(
                       containerHeight: 140,

@@ -3,7 +3,6 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/courseCompleted_screen.dart';
-import 'package:secoola_app/view/courseDetails_screen.dart';
 import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/account_screen.dart';
 import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/myCourse_screen.dart';
 import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/wishlist_screen.dart';
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return const GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            home: PaymentScreen(),
+            home: OnBoarding(),
           );
         });
   }

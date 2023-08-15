@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:secoola_app/view/myCourse_tabbar.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
-import 'package:secoola_app/view/widgets/tabBar.dart';
 
 import '../../widgets/appBar_widgets/SearchTextButton.dart';
 
@@ -40,7 +40,7 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
             const SizedBox(
               height: 20,
             ),
-            const TabBarVieWidget(),
+            MyCourseTabbar(),
             const SizedBox(
               height: 40,
             ),

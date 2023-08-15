@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/pick%20topic/picTopic%20widgets/topic_container.dart';
@@ -21,34 +22,34 @@ class _PickTopicState extends State<PickTopic> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Pick your favorite topic',
-              style: TextStyle(fontSize: 24, color: Colors.black),
+              style: TextStyle(fontSize: 24.sp, color: Colors.black),
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 15.h,
             ),
             Container(
-              width: 294,
-              height: 41,
-              child: const Text(
+              width: 294.w,
+              height: 41.h,
+              child: Text(
                 textAlign: TextAlign.center,
                 'Choose your favorite topic to help us deliver the most suitable course for you.',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   color: Color(0xffA9AEB2),
                 ),
               ),
             ),
-            const SizedBox(
-              height: 40,
+            SizedBox(
+              height: 40.h,
             ),
             Container(
-              width: 335,
-              height: 386,
+              width: 335.w,
+              height: 386.h,
               child: GridView.count(
                 scrollDirection: Axis.vertical,
-                mainAxisSpacing: 20,
+                mainAxisSpacing: 20.h,
                 crossAxisCount: 3,
                 children: const [
                   TopicContainer(
@@ -90,8 +91,8 @@ class _PickTopicState extends State<PickTopic> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             CommonButton(
               buttonLabel: 'Start your journey',
@@ -99,16 +100,16 @@ class _PickTopicState extends State<PickTopic> {
                 Get.to(const BottomNavManager());
               },
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             Container(
-              width: 294,
-              height: 41,
-              child: const Text(
+              width: 294.w,
+              height: 41.h,
+              child: Text(
                 'You can still change your topic again later',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   color: Color(0xffA9AEB2),
                 ),
               ),

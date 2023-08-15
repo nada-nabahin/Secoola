@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:secoola_app/view/paymentSucess_screen.dart';
 
 class BottomContainer extends StatelessWidget {
   const BottomContainer({super.key});
@@ -6,15 +9,15 @@ class BottomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 148,
+      height: 148.h,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5), // Shadow color
-            spreadRadius: 5, // Spread radius of the shadow
-            blurRadius: 7, // Blur radius of the shadow
-            offset: Offset(0, 8), // Offset of the shadow
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 8),
           ),
         ],
       ),
@@ -32,12 +35,12 @@ class BottomContainer extends StatelessWidget {
                   style: TextStyle(fontSize: 12),
                 ),
                 Container(
-                  height: 30,
+                  height: 30.h,
                   decoration: BoxDecoration(
                     color: Color(0XFFDCF3F5),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Center(
+                  child: Center(
                     child: Padding(
                       padding: EdgeInsets.only(
                         left: 10,
@@ -50,7 +53,7 @@ class BottomContainer extends StatelessWidget {
                         'VEKTORABELAJAR  :',
                         style: TextStyle(
                           color: Color(0xff00A9B7),
-                          fontSize: 12,
+                          fontSize: 12.sp,
                         ),
                       ),
                     ),
@@ -58,24 +61,24 @@ class BottomContainer extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(bottom: 10),
                   child: Column(
                     children: [
                       Text(
                         'Total',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 16.sp),
                       ),
                       Text(
                         '\$520',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 24.sp,
                           color: Color(0xff00A9B7),
                         ),
                       ),
@@ -83,15 +86,17 @@ class BottomContainer extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(PaymentSucess());
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xff00A9B7),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
                       left: 20,
                       right: 20,
                       top: 10,
@@ -100,7 +105,7 @@ class BottomContainer extends StatelessWidget {
                     child: Text(
                       textAlign: TextAlign.center,
                       'Checkout',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
+                      style: TextStyle(fontSize: 16.sp, color: Colors.white),
                     ),
                   ),
                 ),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/myCourse_screen.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 
 class PaymentSucess extends StatelessWidget {
@@ -50,19 +53,24 @@ class PaymentSucess extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
-            child: const Padding(
+            child: Padding(
               padding: EdgeInsets.only(
                 left: 60,
                 right: 60,
                 top: 12,
                 bottom: 12,
               ),
-              child: Text(
-                textAlign: TextAlign.center,
-                'Go to my course',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
+              child: GestureDetector(
+                onTap: () {
+                  Get.to(MyCourseScreen());
+                },
+                child: Text(
+                  textAlign: TextAlign.center,
+                  'Go to my course',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
@@ -70,11 +78,16 @@ class PaymentSucess extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          const Text(
-            'Back to Home',
-            style: TextStyle(
-              color: Color(0xff00A9B7),
-              fontSize: 16,
+          GestureDetector(
+            onTap: (){
+              Get.to(BottomNavManager());
+            },
+            child: const Text(
+              'Back to Home',
+              style: TextStyle(
+                color: Color(0xff00A9B7),
+                fontSize: 16,
+              ),
             ),
           ),
         ],

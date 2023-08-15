@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TopicContainer extends StatefulWidget {
   final String imageLink;
@@ -30,46 +31,46 @@ class _TopicContainerState extends State<TopicContainer> {
           Stack(
             children: [
               Container(
-                width: 60,
-                height: 60,
+                width: 60.w,
+                height: 60.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
                   border: isSelected
-                      ? Border.all(color: Color(0xff00A9B7), width: 2)
-                      : null, 
+                      ? Border.all(color: Color(0xff00A9B7), width: 2.w)
+                      : null,
                 ),
                 child: Center(
                   child: Image(
                     image: AssetImage(widget.imageLink),
-                    width: 24,
-                    height: 24,
+                    width: 24.w,
+                    height: 24.h,
                   ),
                 ),
               ),
-              if (isSelected)
+              /*  if (isSelected)
                 Positioned(
                   top: -10,
                   right: -10,
                   child: Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
+                    width: 24.w,
+                    height: 24.h,
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xff00A9B7),
                     ),
                     child: Icon(Icons.check, color: Colors.white, size: 16),
                   ),
-                ),
+                ), */
             ],
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Text(
             widget.topicName,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 14.sp,
               color: isSelected ? Color(0xff00A9B7) : Color(0xffA9AEB2),
             ),
           ),

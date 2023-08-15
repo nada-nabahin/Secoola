@@ -27,7 +27,7 @@ class _ResetPasswordState extends State<ResetPassword> {
           SizedBox(
             height: 80.h,
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -35,35 +35,35 @@ class _ResetPasswordState extends State<ResetPassword> {
                 child: Text(
                   'Reset your password',
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 24.sp,
                     color: Colors.black,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 10.h,
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Enter your email and a verification code to reset the password will be sent to your email.',
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     color: Color(0xffA9AEB2),
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
           RegisterationTextField(
             label: 'Your email',
             textfieldIcon: Icons.lock,
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           CommonButton(
             buttonLabel: 'Send verification code',

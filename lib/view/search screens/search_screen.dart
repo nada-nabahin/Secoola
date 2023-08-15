@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:secoola_app/view/courseDetails_screen.dart';
 import 'package:secoola_app/view/search%20screens/search_result.dart';
 import 'package:secoola_app/view/widgets/listTileTitle.dart';
 import 'package:secoola_app/view/widgets/popular_search_word.dart';
