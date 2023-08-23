@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 
 class CourseCompleted extends StatelessWidget {
@@ -10,7 +11,7 @@ class CourseCompleted extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 200,
+            height: 200.h,
           ),
           Center(
             child: ContenerColoeOnbordingCustom(
@@ -18,29 +19,29 @@ class CourseCompleted extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 80,
+            height: 80.h,
           ),
           Center(
             child: Text(
               'Course completed',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 24.sp,
               ),
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 20.h,
           ),
           Text(
             textAlign: TextAlign.center,
             'Congratulation! Your transaction is successful,\n you can start your course now.',
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 14.sp,
               color: Color(0xff899197),
             ),
           ),
           SizedBox(
-            height: 70,
+            height: 70.h,
           ),
           ElevatedButton(
             onPressed: () {},
@@ -50,31 +51,31 @@ class CourseCompleted extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
               ),
             ),
-            child: const Padding(
+            child: Padding(
               padding: EdgeInsets.only(
-                left: 60,
-                right: 60,
-                top: 12,
-                bottom: 12,
+                left: 60.w,
+                right: 60.w,
+                top: 12.h,
+                bottom: 12.h,
               ),
               child: Text(
                 textAlign: TextAlign.center,
                 'Share your experience',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 16.sp,
                   color: Colors.white,
                 ),
               ),
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 40.h,
           ),
-          const Text(
+          Text(
             'Back to my course',
             style: TextStyle(
               color: Color(0xff00A9B7),
-              fontSize: 16,
+              fontSize: 16.sp,
             ),
           ),
         ],

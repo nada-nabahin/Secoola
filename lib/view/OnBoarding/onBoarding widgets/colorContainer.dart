@@ -8,7 +8,7 @@ class ContenerColoeOnbordingCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 42.5),
+      padding: EdgeInsets.symmetric(horizontal: 42.5.w),
       width: 300.w,
       height: 180.h,
       decoration: BoxDecoration(

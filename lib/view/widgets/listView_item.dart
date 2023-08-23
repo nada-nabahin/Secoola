@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/person_widget.dart';
 
 class ListViewItem extends StatelessWidget {
@@ -28,9 +29,9 @@ class ListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20.w),
       child: Container(
-        height: 224,
+        height: 224.h,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
@@ -44,10 +45,10 @@ class ListViewItem extends StatelessWidget {
             Container(
               width: containerWidth,
               height: containerHeight,
-              padding: const EdgeInsets.only(
-                top: 10,
-                left: 10,
-                right: 10,
+              padding: EdgeInsets.only(
+                top: 10.h,
+                left: 10.w,
+                right: 10.w,
               ),
               decoration: BoxDecoration(
                 //container color
@@ -61,14 +62,14 @@ class ListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 49,
-                    height: 28,
+                    width: 49.w,
+                    height: 28.h,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 5),
+                      padding: EdgeInsets.only(left: 5.w),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -77,19 +78,19 @@ class ListViewItem extends StatelessWidget {
                             color: Colors.amber[300],
                             size: 12,
                           ),
-                          const SizedBox(width: 3),
-                          const Text(
+                          SizedBox(width: 3.w),
+                          Text(
                             '4.8',
-                            style: TextStyle(fontSize: 13),
+                            style: TextStyle(fontSize: 13.sp),
                           ),
                         ],
                       ),
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  SizedBox(width: 8.w),
                   Container(
-                    width: 28,
-                    height: 28,
+                    width: 28.w,
+                    height: 28.h,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -104,13 +105,13 @@ class ListViewItem extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: 10.h,
             ),
             //texts
             Padding(
-              padding: const EdgeInsets.only(
-                left: 7,
+              padding: EdgeInsets.only(
+                left: 7.w,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,47 +119,47 @@ class ListViewItem extends StatelessWidget {
                   Text(
                     //title under the container
                     title,
-                    style: const TextStyle(
-                      fontSize: 14,
+                    style: TextStyle(
+                      fontSize: 14.sp,
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
+                  SizedBox(
+                    height: 5.h,
                   ),
                   PersonWidget(
                     personName: personName,
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   Row(
                     children: [
                       Text(
                         price,
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Color(0xff00A9B7),
-                          fontSize: 16,
+                          fontSize: 16.sp,
                         ),
                       ),
-                      const SizedBox(
-                        width: 5,
+                      SizedBox(
+                        width: 5.w,
                       ),
                       Container(
-                        height: 25,
+                        height: 25.h,
                         decoration: BoxDecoration(
                           color: shadeColor,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 5),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10.w, vertical: 5.h),
                           child: Center(
                             child: Text(
                               textAlign: TextAlign.center,
                               noteAboutPrice,
                               style: TextStyle(
                                 color: noteColor,
-                                fontSize: 12,
+                                fontSize: 12.sp,
                               ),
                             ),
                           ),

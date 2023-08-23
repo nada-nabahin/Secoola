@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 import 'package:secoola_app/view/widgets/curriculam_item.dart';
 
@@ -52,18 +53,18 @@ class _MyCourseTabbarState extends State<MyCourseTabbar>
               tabs: [
                 Tab(
                   child: Container(
-                    width: 158,
-                    height: 38,
+                    width: 158.w,
+                    height: 38.h,
                     alignment: Alignment.center,
                     child: const Text("Ongoing"),
                   ),
                 ),
                 Tab(
                   child: Container(
-                    width: 158,
-                    height: 38,
+                    width: 158.w,
+                    height: 38.h,
                     alignment: Alignment.center,
-                    child: const Text("Review"),
+                    child: const Text("Complete"),
                   ),
                 ),
               ],

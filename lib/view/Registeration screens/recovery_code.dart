@@ -48,7 +48,7 @@ class _RecoveryCodeState extends State<RecoveryCode> {
                 height: 10.h,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 16.0),
+                padding: EdgeInsets.only(left: 16.0.w),
                 child: Text(
                   'Check your inbox, we have sent the Verification code to your email.',
                   style: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Title_seeAll extends StatelessWidget {
   final String title;
@@ -9,20 +10,20 @@ class Title_seeAll extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 20,
-        right: 20,
-        bottom: 15,
-        left: 20,
+      padding: EdgeInsets.only(
+        top: 20.h,
+        right: 20.w,
+        bottom: 15.h,
+        left: 20.w,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.black,
-              fontSize: 18,
+              fontSize: 18.sp,
             ),
           ),
           TextButton(

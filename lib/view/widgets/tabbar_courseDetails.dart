@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/curriculam_item.dart';
 
 class TabBarVieWidget extends StatefulWidget {
@@ -51,27 +52,27 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
               tabs: [
                 Tab(
                   child: Container(
-                    width: 158,
-                    height: 38,
+                    width: 158.w,
+                    height: 38.h,
                     alignment: Alignment.center,
                     child: const Text("Curriculum"),
                   ),
                 ),
                 Tab(
                   child: Container(
-                    width: 158,
-                    height: 38,
+                    width: 158.w,
+                    height: 38.h,
                     alignment: Alignment.center,
                     child: const Text("Review"),
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             SizedBox(
-              height: 264,
+              height: 264.h,
               width: double.infinity,
               child: TabBarView(
                 controller: tabController,
@@ -101,22 +102,22 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
 
                   //ٌReview
                   Padding(
-                    padding: const EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 20.h),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Center(
+                        Center(
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Text(
                                   'Student reviews',
-                                  style: TextStyle(fontSize: 16),
+                                  style: TextStyle(fontSize: 16.sp),
                                 ),
                                 SizedBox(
-                                  height: 12,
+                                  height: 12.h,
                                 ),
-                                Row(
+                                const Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Icon(Icons.star,
@@ -134,8 +135,8 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                                 ),
                               ]),
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.h,
                         ),
                         const Row(
                           children: [
@@ -143,14 +144,14 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                             Icon(Icons.arrow_drop_down_sharp)
                           ],
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.h,
                         ),
                         Row(
                           children: [
                             Container(
-                              width: 36,
-                              height: 36,
+                              width: 36.w,
+                              height: 36.h,
                               decoration: const BoxDecoration(
                                 color: Color(0xffFFEA7D),
                                 borderRadius: BorderRadius.all(
@@ -158,8 +159,8 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              width: 15,
+                            SizedBox(
+                              width: 15.w,
                             ),
                             const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,18 +169,18 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                                 Text('1 day ago'),
                               ],
                             ),
-                            const SizedBox(
-                              width: 80,
+                            SizedBox(
+                              width: 80.w,
                             ),
                             Container(
-                              width: 67,
-                              height: 32,
+                              width: 67.w,
+                              height: 32.h,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 5),
+                                padding: EdgeInsets.only(left: 5.w),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -188,10 +189,10 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                                       color: Colors.amber[300],
                                       size: 12,
                                     ),
-                                    const SizedBox(width: 3),
-                                    const Text(
+                                    SizedBox(width: 3.w),
+                                    Text(
                                       '4.8',
-                                      style: TextStyle(fontSize: 16),
+                                      style: TextStyle(fontSize: 16.sp),
                                     ),
                                   ],
                                 ),
@@ -199,7 +200,7 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                             ),
                           ],
                         ),
-                        const SizedBox(height: 20),
+                        SizedBox(height: 20.h),
                         const Text(
                           textAlign: TextAlign.left,
                           'Description this is a simple description that explain\n the description about the class or blabla bla.',
@@ -207,8 +208,8 @@ class _TabBarVieWidgetState extends State<TabBarVieWidget>
                             color: Color(0xffA9AEB2),
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
+                        SizedBox(
+                          height: 20.h,
                         ),
                       ],
                     ),

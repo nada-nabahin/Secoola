@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData? icon;
@@ -19,7 +20,7 @@ class CircleButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(3),
       child: Container(
-        height: 48,
+        height: 48.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(17),
@@ -33,21 +34,20 @@ class CircleButton extends StatelessWidget {
             children: [
               Center(
                 child: Icon(
-                  
                   icon,
                   color: Colors.white,
                   size: 24,
                 ),
               ),
-              const SizedBox(
-                width: 8,
+              SizedBox(
+                width: 8.w,
               ),
               if (text != null)
                 Text(
                   text!,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 14,
+                    fontSize: 14.sp,
                   ),
                 ),
             ],

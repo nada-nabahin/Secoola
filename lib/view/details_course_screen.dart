@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/Bottom%20nav/bottom_nav.dart';
@@ -51,7 +52,7 @@ class _CourseState extends State<CourseDetails> {
         body: Stack(
           children: [
             Container(
-              height: 250,
+              height: 250.h,
               width: double.infinity,
               color: const Color(0xffFFEA7D),
               child: Center(
@@ -63,7 +64,7 @@ class _CourseState extends State<CourseDetails> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 200),
+              margin: EdgeInsets.only(top: 200.h),
               height: double.infinity,
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -77,7 +78,7 @@ class _CourseState extends State<CourseDetails> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsets.only(top: 25, left: 16, right: 16),
+                          EdgeInsets.only(top: 25.h, left: 16.w, right: 16.w),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -85,22 +86,22 @@ class _CourseState extends State<CourseDetails> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
+                                Text(
                                   'Design Thinking Fundamental',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20.sp),
                                 ),
-                                const SizedBox(
-                                  height: 10,
+                                SizedBox(
+                                  height: 10.h,
                                 ),
                                 Row(
                                   children: [
-                                    const PersonWidget(
+                                    PersonWidget(
                                       personName: 'Halo Academy',
                                       iconColor: Color(0xff00A9B7),
-                                      fontSize: 16,
+                                      fontSize: 16.sp,
                                     ),
-                                    const SizedBox(
-                                      width: 50,
+                                    SizedBox(
+                                      width: 50.w,
                                     ),
                                     Row(
                                       mainAxisAlignment:
@@ -111,31 +112,31 @@ class _CourseState extends State<CourseDetails> {
                                           color: Colors.amber[300],
                                           size: 16,
                                         ),
-                                        const SizedBox(width: 5),
-                                        const Text(
+                                        SizedBox(width: 5.w),
+                                        Text(
                                           '4.8',
-                                          style: TextStyle(fontSize: 16),
+                                          style: TextStyle(fontSize: 16.sp),
                                         ),
                                       ],
                                     ),
                                   ],
                                 ),
-                                const SizedBox(
-                                  height: 20,
+                                SizedBox(
+                                  height: 20.h,
                                 ),
-                                const Text(
+                                Text(
                                   textAlign: TextAlign.left,
                                   'Description this is a simple description that explain\n the description about the class or blabla bla and then\n blablabla of course.',
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 14.sp,
                                     color: Color(0xffA9AEB2),
                                   ),
                                 ),
-                                const SizedBox(
-                                  height: 25,
+                                SizedBox(
+                                  height: 25.h,
                                 ),
                                 //details///////////////
-                                const Row(
+                                Row(
                                   children: [
                                     Column(
                                       crossAxisAlignment:
@@ -144,32 +145,32 @@ class _CourseState extends State<CourseDetails> {
                                         Text(
                                           'Students',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             color: Color(0xffA9AEB2),
                                           ),
                                         ),
                                         Text(
                                           '143.247',
-                                          style: TextStyle(fontSize: 16),
+                                          style: TextStyle(fontSize: 16.sp),
                                         ),
                                         SizedBox(
-                                          height: 15,
+                                          height: 15.h,
                                         ),
                                         Text(
                                           'Last update',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             color: Color(0xffA9AEB2),
                                           ),
                                         ),
                                         Text(
                                           'Feb 2, 2021',
-                                          style: TextStyle(fontSize: 16),
+                                          style: TextStyle(fontSize: 16.sp),
                                         ),
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 80,
+                                      width: 80.w,
                                     ),
                                     Column(
                                       crossAxisAlignment:
@@ -178,21 +179,21 @@ class _CourseState extends State<CourseDetails> {
                                         Text(
                                           'Language',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             color: Color(0xffA9AEB2),
                                           ),
                                         ),
                                         Text(
                                           'English',
-                                          style: TextStyle(fontSize: 16),
+                                          style: TextStyle(fontSize: 16.sp),
                                         ),
                                         SizedBox(
-                                          height: 15,
+                                          height: 15.h,
                                         ),
                                         Text(
                                           'Subtitle',
                                           style: TextStyle(
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                             color: Color(0xffA9AEB2),
                                           ),
                                         ),
@@ -200,13 +201,13 @@ class _CourseState extends State<CourseDetails> {
                                           children: [
                                             Text(
                                               'English and ',
-                                              style: TextStyle(fontSize: 16),
+                                              style: TextStyle(fontSize: 16.sp),
                                             ),
                                             Text(
                                               '5 more',
                                               style: TextStyle(
                                                 color: Color(0xff00A9B7),
-                                                fontSize: 16,
+                                                fontSize: 16.sp,
                                               ),
                                             ),
                                           ],
@@ -218,15 +219,15 @@ class _CourseState extends State<CourseDetails> {
                               ],
                             ),
                           ),
-                          const SizedBox(
-                            height: 30,
+                          SizedBox(
+                            height: 30.h,
                           ),
                           TabBarVieWidget(),
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 15,
+                    SizedBox(
+                      height: 15.h,
                     ),
                     //price
                     const CourseDetailsBottomContainer(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/bottomContainer.dart';
 import 'package:secoola_app/view/widgets/itemes_detail.dart';
 import 'package:secoola_app/view/widgets/title_seeAll.dart';
@@ -13,11 +14,11 @@ class PaymentScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20),
+          Padding(
+            padding: EdgeInsets.only(left: 20.w),
             child: Row(
               children: [
                 Icon(
@@ -30,7 +31,7 @@ class PaymentScreen extends StatelessWidget {
                     child: Text(
                       'Payment',
                       style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 16.sp,
                       ),
                     ),
                   ),
@@ -38,21 +39,21 @@ class PaymentScreen extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 60,
+          SizedBox(
+            height: 60.h,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 20),
+          Padding(
+            padding: EdgeInsets.only(left: 20.w),
             child: Text(
               textAlign: TextAlign.start,
               'Items detail',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18.sp,
               ),
             ),
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 30.h,
           ),
           ItemsDetail(
             containerColor: Color(0xff86F2CB),
@@ -63,8 +64,8 @@ class PaymentScreen extends StatelessWidget {
             noteColor: Color(0xff00A9B7),
             shadeColor: Color(0xffDCF3F5),
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 10.h,
           ),
           Container(
             child: Title_seeAll(
@@ -73,41 +74,41 @@ class PaymentScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 15,
+            height: 15.h,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 30),
             child: Row(
               children: [
                 Container(
-                  width: 40,
-                  height: 40,
+                  width: 40.w,
+                  height: 40.h,
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 15.w,
                 ),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       //title under the container
                       'Master Card',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 14.sp,
                       ),
                     ),
                     SizedBox(
-                      height: 3,
+                      height: 3.h,
                     ),
                     Text(
                       '**** **** **** 8271',
                       style: TextStyle(
                         color: Color(0xffA9AEB2),
-                        fontSize: 12,
+                        fontSize: 12.sp,
                       ),
                     ),
                   ],

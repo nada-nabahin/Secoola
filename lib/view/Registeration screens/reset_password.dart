@@ -31,7 +31,7 @@ class _ResetPasswordState extends State<ResetPassword> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 16.0),
+                padding: EdgeInsets.only(left: 16.0.w),
                 child: Text(
                   'Reset your password',
                   style: TextStyle(
@@ -44,7 +44,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                 height: 10.h,
               ),
               Padding(
-                padding: EdgeInsets.only(left: 16.0),
+                padding: EdgeInsets.only(left: 16.0.w),
                 child: Text(
                   'Enter your email and a verification code to reset the password will be sent to your email.',
                   style: TextStyle(

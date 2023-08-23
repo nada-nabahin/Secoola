@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/gridViewItem.dart';
 import 'package:secoola_app/view/widgets/listView_item.dart';
 
@@ -125,11 +126,11 @@ class GridWidget extends StatelessWidget {
       itemCount: 12,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        mainAxisSpacing: 10,
+        mainAxisSpacing: 10.w,
       ),
       itemBuilder: (context, index) {
         return GridViewItem(
-          containerWidth: 158,
+          containerWidth: 158.w,
           containerColor: itemList[index]['containerColor'],
           title: itemList[index]['title'],
           personName: itemList[index]['personName'],

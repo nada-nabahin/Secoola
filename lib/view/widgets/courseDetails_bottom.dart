@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/wishlist_screen.dart';
+import 'package:secoola_app/view/Bottom%20nav/NavBar_Screens/nav%20bar%20secreens%20widgets/wishlist_screen.dart';
 import 'package:secoola_app/view/paymentSucess_screen.dart';
 import 'package:secoola_app/view/payment_screen.dart';
 import 'package:secoola_app/view/widgets/commonButton.dart';

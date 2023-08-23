@@ -10,7 +10,7 @@ class BackArrowAndTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 20),
+      padding: EdgeInsets.only(left: 20.w),
       child: Row(
         children: [
           GestureDetector(

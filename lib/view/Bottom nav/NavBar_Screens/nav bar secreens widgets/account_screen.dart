@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:secoola_app/view/faq_screen.dart';
@@ -25,18 +26,18 @@ class AccountScreen extends StatelessWidget {
                     radius: 30,
                     backgroundColor: Color(0xffFFEA7D),
                   ),
-                  const SizedBox(width: 10),
-                  const Column(
+                  SizedBox(width: 10.w),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Raymond Skyberg",
                         style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
+                            fontSize: 18.sp, fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "raymond@mail.com",
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
+                        style: TextStyle(fontSize: 14.sp, color: Colors.grey),
                       ),
                     ],
                   ),
@@ -174,7 +175,7 @@ class SettingsGroup extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 15, 0, 10),
           child: Text(
             title,
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
           ),
         ),
         Column(

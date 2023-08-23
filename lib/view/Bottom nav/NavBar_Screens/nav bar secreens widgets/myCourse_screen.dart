@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/myCourse_tabbar.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
 import 'package:secoola_app/view/widgets/courseScreenTopic.dart';
 
-import '../../widgets/appBar_widgets/SearchTextButton.dart';
+import '../../../widgets/appBar_widgets/SearchTextButton.dart';
 
 class MyCourseScreen extends StatefulWidget {
   MyCourseScreen({super.key});
@@ -21,11 +22,11 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
         backgroundColor: const Color(0xff00A9B7),
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'My Course',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 24,
+            fontSize: 24.sp,
           ),
         ),
       ),
@@ -34,15 +35,15 @@ class _MyCourseScreenState extends State<MyCourseScreen> {
         child: Column(
           children: [
             ContainerUnderAppbar(
-              containerHeight: 150,
+              containerHeight: 150.h,
               text: '',
             ),
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: 20.h,
             ),
             MyCourseTabbar(),
-            const SizedBox(
-              height: 40,
+            SizedBox(
+              height: 40.h,
             ),
             CourseScreenTopic(
               percentrdegree: .8,

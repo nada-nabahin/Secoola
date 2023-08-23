@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/SearchTextButton.dart';
 
 class ContainerUnderAppbar extends StatelessWidget {
@@ -12,8 +13,8 @@ class ContainerUnderAppbar extends StatelessWidget {
     return Container(
       height: containerHeight,
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 25,
+      padding: EdgeInsets.symmetric(
+        horizontal: 25.w,
       ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -28,17 +29,17 @@ class ContainerUnderAppbar extends StatelessWidget {
           const Spacer(),
           Text(
             text,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
-              fontSize: 24,
+              fontSize: 24.sp,
             ),
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 15.h,
           ),
           const SearchTextButton(),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 15.h,
           ),
         ],
       ),

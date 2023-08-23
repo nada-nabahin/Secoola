@@ -19,88 +19,90 @@ class _SignInState extends State<SignIn> {
       backgroundColor: const Color(0xffFAFAFA),
       body: Padding(
         padding: EdgeInsets.all(20),
-        child: Column(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 100.h,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'Welcome back',
-                      style: TextStyle(
-                        fontSize: 24.sp,
-                        color: Colors.black,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                    SizedBox(width: 15.w),
-                    Image(
-                      image: AssetImage('assets/iconImages/wave.png'),
-                      height: 24.h,
-                      width: 24.w,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10.h,
-                ),
-                Text(
-                  'Login to your account to continue your course.',
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    color: Color(0xffA9AEB2),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 100.h,
                   ),
-                  textAlign: TextAlign.start,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 60.h,
-            ),
+                  Row(
+                    children: [
+                      Text(
+                        'Welcome back',
+                        style: TextStyle(
+                          fontSize: 24.sp,
+                          color: Colors.black,
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                      SizedBox(width: 15.w),
+                      Image(
+                        image: AssetImage('assets/iconImages/wave.png'),
+                        height: 24.h,
+                        width: 24.w,
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  Text(
+                    'Login to your account to continue your course.',
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      color: Color(0xffA9AEB2),
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 60.h,
+              ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconContainer(
-                  imageLink: 'assets/iconImages/google.png',
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconContainer(
+                    imageLink: 'assets/iconImages/google.png',
+                  ),
+                  IconContainer(imageLink: 'assets/iconImages/facebook.png'),
+                  IconContainer(
+                    imageLink: 'assets/iconImages/apple-logo.png',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 55.h,
+              ),
+              Text(
+                textAlign: TextAlign.center,
+                'Or login with your email',
+                style: TextStyle(
+                  color: Color(0xffA9AEB2),
+                  fontSize: 14.sp,
                 ),
-                IconContainer(imageLink: 'assets/iconImages/facebook.png'),
-                IconContainer(
-                  imageLink: 'assets/iconImages/apple-logo.png',
+              ),
+              SizedBox(
+                height: 55.h,
+              ),
+              //sign up forms
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.w,
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 55.h,
-            ),
-            Text(
-              textAlign: TextAlign.center,
-              'Or login with your email',
-              style: TextStyle(
-                color: Color(0xffA9AEB2),
-                fontSize: 14.sp,
+                child: RegisterationForm(
+                  buttonLabel: 'Login',
+                  onPressed: () {
+                    Get.to(PickTopic());
+                  },
+                ),
               ),
-            ),
-            SizedBox(
-              height: 55.h,
-            ),
-            //sign up forms
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
-              child: RegisterationForm(
-                buttonLabel: 'Login',
-                onPressed: () {
-                  Get.to(PickTopic());
-                },
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

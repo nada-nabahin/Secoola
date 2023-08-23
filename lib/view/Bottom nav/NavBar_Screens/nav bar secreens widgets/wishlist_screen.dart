@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:secoola_app/view/widgets/appBar_widgets/container_under_appbar.dart';
 import 'package:secoola_app/view/widgets/gridView.dart';
 
-import '../../widgets/appBar_widgets/SearchTextButton.dart';
+import '../../../widgets/appBar_widgets/SearchTextButton.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});
@@ -19,7 +20,7 @@ class WishlistScreen extends StatelessWidget {
           'Wishlist',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 24,
+            fontSize: 24.sp,
           ),
         ),
       ),
@@ -27,7 +28,7 @@ class WishlistScreen extends StatelessWidget {
         child: Column(
           children: [
             ContainerUnderAppbar(
-              containerHeight: 150,
+              containerHeight: 150.h,
               text: '',
             ),
             GridWidget(),

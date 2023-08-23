@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class CourseScreenTopic extends StatelessWidget {
@@ -30,23 +31,23 @@ class CourseScreenTopic extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
       ),
-      height: 186,
-      width: 335,
+      height: 186.h,
+      width: 335.w,
       padding: EdgeInsets.all(5),
       child: Column(
         children: [
           Row(
             children: [
               Container(
-                height: 68,
-                width: 68,
+                height: 68.h,
+                width: 68.w,
                 decoration: BoxDecoration(
                   color: containerColor,
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),
               SizedBox(
-                width: 15,
+                width: 15.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,12 +55,12 @@ class CourseScreenTopic extends StatelessWidget {
                   Text(
                     //title under the container
                     title,
-                    style: const TextStyle(
-                      fontSize: 14,
+                    style: TextStyle(
+                      fontSize: 14.sp,
                     ),
                   ),
-                  const SizedBox(
-                    height: 3,
+                  SizedBox(
+                    height: 3.h,
                   ),
                   //person name & icon
                   Row(
@@ -69,24 +70,24 @@ class CourseScreenTopic extends StatelessWidget {
                         size: 18,
                         color: Color(0xffA9AEB2),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 3),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 3.w),
                       ),
                       Text(
                         personName,
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Color(0xffA9AEB2),
-                          fontSize: 12,
+                          fontSize: 12.sp,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 10.h,
                   ),
                   Container(
-                    width: 50,
-                    height: 20,
+                    width: 50.w,
+                    height: 20.h,
                     decoration: BoxDecoration(
                       color: shadeColor,
                       borderRadius: BorderRadius.circular(20),
@@ -97,7 +98,7 @@ class CourseScreenTopic extends StatelessWidget {
                         noteAboutCourse,
                         style: TextStyle(
                           color: noteColor,
-                          fontSize: 12,
+                          fontSize: 12.sp,
                         ),
                       ),
                     ),
@@ -106,8 +107,8 @@ class CourseScreenTopic extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           //progress & due time
           Row(
@@ -116,45 +117,45 @@ class CourseScreenTopic extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Progress',
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: Color(0xffA9AEB2),
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
+                  SizedBox(
+                    height: 5.h,
                   ),
                   Text(
                     progress,
-                    style: const TextStyle(
-                      fontSize: 14,
+                    style: TextStyle(
+                      fontSize: 14.sp,
                       color: Color(0xff1D2D3A),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                width: 60,
+              SizedBox(
+                width: 60.w,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Due time',
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: Color(0xffA9AEB2),
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
+                  SizedBox(
+                    height: 5.h,
                   ),
                   Text(
                     dueTime,
-                    style: const TextStyle(
-                      fontSize: 14,
+                    style: TextStyle(
+                      fontSize: 14.sp,
                       color: Color(0xff1D2D3A),
                     ),
                   )
@@ -163,12 +164,12 @@ class CourseScreenTopic extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 20.h,
           ),
           LinearPercentIndicator(
             animation: true,
             animationDuration: 1000,
-            lineHeight: 8,
+            lineHeight: 8.h,
             percent: percentrdegree,
             progressColor: Color(0xff00CDB1),
             backgroundColor: Color(0xffF6F6F6),

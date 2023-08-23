@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/colorContainer.dart';
 import 'package:secoola_app/view/OnBoarding/onBoarding%20widgets/onBoarding_text.dart';
@@ -29,11 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: const Color(0xff00A9B7),
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'Hi,Dimas',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 24,
+            fontSize: 24.sp,
           ),
         ),
         actions: [
@@ -42,9 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
               _shoppingBottomSheet(context);
             },
             child: Padding(
-              padding: const EdgeInsets.only(
-                right: 5,
-                top: 5,
+              padding: EdgeInsets.only(
+                right: 5.w,
+                top: 5.h,
               ),
               child: CircleButton(
                 circleButtonColor: const Color.fromRGBO(112, 112, 112, 0.3),
@@ -52,17 +53,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          const SizedBox(
-            width: 5,
+          SizedBox(
+            width: 5.w,
           ),
           GestureDetector(
             onTap: () {
               _notificationBottomSheet(context);
             },
             child: Padding(
-              padding: const EdgeInsets.only(
-                right: 5,
-                top: 5,
+              padding: EdgeInsets.only(
+                right: 5.w,
+                top: 5.h,
               ),
               child: CircleButton(
                 circleButtonColor: const Color.fromRGBO(112, 112, 112, .3),
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             ContainerUnderAppbar(
-              containerHeight: 180,
+              containerHeight: 180.h,
               text: " Let\'s start learning!",
             ),
 
@@ -89,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               textButton_word: 'See All',
             ),
             Container(
-              height: 230,
+              height: 230.h,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
@@ -98,8 +99,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       Get.to(const CourseDetails());
                     },
                     child: ListViewItem(
-                      containerHeight: 140,
-                      containerWidth: 220,
+                      containerHeight: 137.h,
+                      containerWidth: 220.w,
                       containerColor: const Color(0xffFFEA7D),
                       title: 'Design Thingking Fundamental',
                       personName: 'Robert Fix',
@@ -110,8 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   ListViewItem(
-                    containerHeight: 140,
-                    containerWidth: 220,
+                    containerHeight: 137.h,
+                    containerWidth: 220.w,
                     containerColor: const Color(0xffA3CCDE),
                     title: 'Flutter Class - Advance Program',
                     personName: 'Wade Warren',
@@ -123,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
 
             //horizontal categories
             Title_seeAll(
@@ -135,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: const EdgeInsets.only(left: 30),
+                padding: EdgeInsets.only(left: 30.w),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -183,13 +184,13 @@ class _HomeScreenState extends State<HomeScreen> {
               textButton_word: 'See All',
             ),
             Container(
-              height: 190,
+              height: 190.h,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xff86F2CB),
                     title: 'Design Thingking F...',
                     personName: 'Dianne Russell',
@@ -199,8 +200,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: const Color(0xff00A9B7),
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffFCE2EA),
                     title: 'Figma Prototyping 1...',
                     personName: 'Jacob Jones',
@@ -210,8 +211,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: Colors.white,
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffFFB099),
                     title: 'UI UX Design Essentials',
                     personName: 'Esther Howard',
@@ -230,13 +231,13 @@ class _HomeScreenState extends State<HomeScreen> {
               textButton_word: 'See All',
             ),
             Container(
-              height: 190,
+              height: 190.h,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffFFEA7D),
                     title: 'Flutter Class - Adv...',
                     personName: 'Cameron Williamson',
@@ -246,8 +247,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: Colors.white,
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xff86F2CB),
                     title: 'Python Class - Adv...',
                     personName: 'Brooklyn Simmons',
@@ -257,8 +258,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: const Color(0xff00A9B7),
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffFFEA7D),
                     title: 'Swift Class - Adv...',
                     personName: 'Cameron Williamson',
@@ -277,13 +278,13 @@ class _HomeScreenState extends State<HomeScreen> {
               textButton_word: 'See All',
             ),
             Container(
-              height: 190,
+              height: 190.h,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffFFB099),
                     title: 'Digital Marketing S...',
                     personName: 'Esther Howard',
@@ -293,8 +294,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: const Color(0xffFF6666),
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffD0B2FF),
                     title: 'Personal Branding F...',
                     personName: 'Savannah Nguyen',
@@ -304,8 +305,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     noteColor: Colors.white,
                   ),
                   ListViewItem(
-                    containerHeight: 100,
-                    containerWidth: 142,
+                    containerHeight: 97.h,
+                    containerWidth: 142.w,
                     containerColor: const Color(0xffA3CCDE),
                     title: 'Neuromarketing & Ma... ',
                     personName: 'Arlene McCoy',
@@ -317,8 +318,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 30.h,
             ),
           ],
         ),
@@ -336,17 +337,17 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return Container(
-          height: 760,
+          height: 760.h,
           child: Column(
             children: [
               Row(
                 children: [
                   const Spacer(),
                   Padding(
-                    padding: const EdgeInsets.only(right: 20, bottom: 10),
+                    padding: EdgeInsets.only(right: 20.w, bottom: 10.h),
                     child: Container(
-                      height: 52,
-                      width: 52,
+                      height: 52.h,
+                      width: 52.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
@@ -376,19 +377,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   child: Column(
                     children: [
-                      const SizedBox(height: 65),
+                      SizedBox(height: 65.h),
                       ContenerColoeOnbordingCustom(
                         color: const Color(0xffFFEA7D),
                       ),
-                      const SizedBox(
-                        height: 90,
+                      SizedBox(
+                        height: 90.h,
                       ),
                       OnBoardingText(
                           firstText: 'Nothing here yet',
                           secondText:
                               'You haven\'t added anything to your cart ,\n start exploring your favorite courses!'),
-                      const SizedBox(
-                        height: 75,
+                      SizedBox(
+                        height: 75.h,
                       ),
                       CommonButton(
                         buttonLabel: 'Explore course',
@@ -415,17 +416,17 @@ class _HomeScreenState extends State<HomeScreen> {
       context: context,
       builder: (BuildContext context) {
         return Container(
-          height: 760,
+          height: 760.h,
           child: Column(
             children: [
               Row(
                 children: [
                   const Spacer(),
                   Padding(
-                    padding: const EdgeInsets.only(right: 20, bottom: 10),
+                    padding: EdgeInsets.only(right: 20.w, bottom: 10.h),
                     child: Container(
-                      height: 52,
-                      width: 52,
+                      height: 52.h,
+                      width: 52.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: const Color(0xffFAFAFA),
@@ -454,58 +455,58 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 20,
-                      left: 15,
-                      right: 15,
+                    padding: EdgeInsets.only(
+                      top: 20.h,
+                      left: 15.w,
+                      right: 15.w,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           'Notification',
-                          style: TextStyle(fontSize: 24),
+                          style: TextStyle(fontSize: 24.sp),
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: 30.h,
                         ),
-                        const Text(
+                        Text(
                           'Today',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 18.sp),
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: 30.h,
                         ),
                         NotificationContainer(
                           text1: 'Your payment is success',
                           text2: 'Start your course now.',
                           notificationIcon: Icons.payment,
                         ),
-                        const SizedBox(
-                          height: 15,
+                        SizedBox(
+                          height: 15.h,
                         ),
                         NotificationContainer(
                           text1: 'Daily reminder',
                           text2: 'Continue you recent course. ',
                           notificationIcon: Icons.notifications,
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: 30.h,
                         ),
-                        const Text(
+                        Text(
                           'Yesterday',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(fontSize: 18.sp),
                         ),
-                        const SizedBox(
-                          height: 30,
+                        SizedBox(
+                          height: 30.h,
                         ),
                         NotificationContainer(
                           text1: 'Download your certificate',
                           text2: 'Go to account page to down...',
                           notificationIcon: Icons.file_download_outlined,
                         ),
-                        const SizedBox(
-                          height: 15,
+                        SizedBox(
+                          height: 15.h,
                         ),
                         NotificationContainer(
                           text1: 'Summer sale!',
